@@ -375,3 +375,7 @@ function getQueryParams() {
     }
     return queryParams;
 }
+
+function closeForm() {
+    document.querySelector('.appointment-form').style.display = 'none';
+}

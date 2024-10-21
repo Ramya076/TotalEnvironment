@@ -10,65 +10,63 @@ use yii\helpers\Url;
     <!-- Hero Section -->
 
     <div class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Hero Content Section -->
+    <?= $this->render('/partials/header.php') ?>
 
-                <div class="col-lg-6 col-md-12 hero-content">
-                    <h6 class="hero-title">IS THAT QUITE EARTH</h6>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Hero Content Section -->
+            <div class="col-lg-6 col-md-12 hero-content">
+                <h6 class="hero-title">IS THAT QUITE EARTH</h6>
 
-                    <p>Avalahalli Main Road, Off Hennur Road, North Bangalore</p>
-                    <p class="text-center">3, 4 BHK | 1,431 - 3,188 sq.ft*</p>
+                <p>Avalahalli Main Road, Off Hennur Road, North Bangalore</p>
+                <p class="text-center">3, 4 BHK | 1,431 - 3,188 sq.ft*</p>
 
-                    <a href="#book" class="btn hero-cta-btn m-auto">Starting From 3.85 Cr*</a>
-                    <ul class="dotted-border">
-                        <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 50,000 sq.
-                            ft. Clubhouse</li>
-                        <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Treetop
-                            Walkway</li>
-                        <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 3 BHK
-                            earth-sheltered villas</li>
-                        <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Lush
-                            Landscape with scenic views</li>
-                        <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span>
-                            State-of-the-art 24/7 security</li>
-                    </ul>
-                </div>
+                <a href="#book" class="btn hero-cta-btn m-auto">Starting From 3.85 Cr*</a>
+                <ul class="dotted-border">
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 50,000 sq. ft. Clubhouse</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Treetop Walkway</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 3 BHK earth-sheltered villas</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Lush Landscape with scenic views</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> State-of-the-art 24/7 security</li>
+                </ul>
+            </div>
 
-                <!-- Appointment Form Section -->
-                <div class="col-lg-6 col-md-12 appointment-form flex-end" id="book">
-                    <div class="form-wrapper">
-                        <h2>Book an Appointment</h2>
-                        <?php $form = ActiveForm::begin(); ?>
+            <!-- Appointment Form Section -->
+            <div class="col-lg-6 col-md-12 appointment-form flex-end" id="book">
+                <div class="form-wrapper">
+                    <!-- Close Button -->
+                    <button class="close-btn" onclick="closeForm()">✖</button>
 
-                        <?= $form->field($model, 'project')->dropDownList([
-                            'In That Quiet Earth' => 'In That Quiet Earth',
-                            'Pursuit of a Radical Rhapsody' => 'Pursuit of a Radical Rhapsody',
-                        ], ['prompt' => 'Choose Project'])->label(false) ?>
+                    <h2>Book an Appointment</h2>
+                    <?php $form = ActiveForm::begin(); ?>
 
-                        <?= $form->field($model, 'name')->textInput(['placeholder' => 'Your Name'])->label(false) ?>
-                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'Your Email'])->label(false) ?>
-                        <?= $form->field($model, 'phone')->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
-                        <?= $form->field($model, 'message')->textarea(['rows' => 4, 'placeholder' => 'Message'])->label(false) ?>
+                    <?= $form->field($model, 'project')->dropDownList([
+                        'In That Quiet Earth' => 'In That Quiet Earth',
+                        'Pursuit of a Radical Rhapsody' => 'Pursuit of a Radical Rhapsody',
+                    ], ['prompt' => 'Choose Project'])->label(false) ?>
 
-                        <div class="form-group">
-                            <?= Html::submitButton('Submit Now', ['class' => 'btn btn-block']) ?>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" id="consent-checkbox" required>
-                                <small>I authorize company representatives to call, SMS, email, or WhatsApp me about its
-                                    products and offers. This consent overrides any registration for DNC/NDNC.</small>
-                            </label>
-                        </div>
+                    <?= $form->field($model, 'name')->textInput(['placeholder' => 'Your Name'])->label(false) ?>
+                    <?= $form->field($model, 'email')->textInput(['placeholder' => 'Your Email'])->label(false) ?>
+                    <?= $form->field($model, 'phone')->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
+                    <?= $form->field($model, 'message')->textarea(['rows' => 4, 'placeholder' => 'Message'])->label(false) ?>
+                    <div class="form-group form-check col-md-12">
+        <label class="d-inline">
+            <input type="checkbox" id="consent-checkbox" required>
+            <small>I authorize Company representative to Call, SMS, Email, or Whatsapp me about the products and offers. This consent overrides any registration for DNC/NDNC.</small>
+        </label>
+    </div>
 
-                        <?php ActiveForm::end(); ?>
-
+                    <div class="form-group">
+                        <?= Html::submitButton('Submit Now', ['class' => 'btn btn-block']) ?>
                     </div>
+                   
+
+                    <?php ActiveForm::end(); ?>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
     <!-- overview section -->
@@ -179,97 +177,152 @@ use yii\helpers\Url;
 
 
     <section class="quality-budget">
-        <div class="container">
-            <!-- Section Title -->
-            <h6 class="section-heading"></h6>
-            <h2 class="section-heading">QUALITY THAT FITS YOUR BUDGET</h2>
+    <div class="container">
+        <!-- Section Title -->
+        <h6 class="section-title text-center">PRICE LIST</h6>
+        <h2 class="section-heading text-center">QUALITY THAT FITS YOUR BUDGET</h2>
 
-            <div class="row">
-                <!-- Apartment Card 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="apartment-card">
-                        <h3 class="card-title">Apartments</h3>
-                        <p class="configuration">Configuration</p>
-                        <p class="price">Size Starting From 3 BHK | 2300 Sq.Ft</p>
-                        <p class="price-start">Price Start From: 7.85 Cr*</p>
+        <div class="row">
+            <!-- Apartment Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="apartment-card">
+                    <h3 class="card-title">Apartments</h3>
+                    <div class="points-container p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="points">Configuration</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="points">Size: 3 BHK | 2300 Sq.Ft</p>
+                            </div>
+                        </div>
+                        <p class="points">Price Start From: 7.85 Cr*</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
                         <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
                         <div class="card-number">01</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Apartment Card 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="apartment-card">
-                        <h3 class="card-title">Apartments</h3>
-                        <p class="configuration">Configuration</p>
-                        <p class="price">Size Starting From 3 BHK | 2750 Sq.Ft</p>
-                        <p class="price-start">Price Start From: 8.25 Cr*</p>
+            <!-- Apartment Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="apartment-card">
+                    <h3 class="card-title">Apartments</h3>
+                    <div class="points-container p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="points">Configuration</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="points">Size: 3.5 BHK | 2750 Sq.Ft</p>
+                            </div>
+                        </div>
+                        <p class="points">Price Start From: 8.25 Cr*</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
                         <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
                         <div class="card-number">02</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Apartment Card 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="apartment-card">
-                        <h3 class="card-title">Apartments</h3>
-                        <p class="configuration">Configuration</p>
-                        <p class="price">Size Starting From 4 BHK | 3100 Sq.Ft</p>
-                        <p class="price-start">Price Start From: 9.35 Cr*</p>
+            <!-- Apartment Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="apartment-card p-3">
+                    <h3 class="card-title">Apartments</h3>
+                    <div class="points-container">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="points">Configuration</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="points">Size: 4 BHK | 3100 Sq.Ft</p>
+                            </div>
+                        </div>
+                        <p class="points">Price Start From: 9.35 Cr*</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
                         <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
                         <div class="card-number">03</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- Highlighted Properties Section -->
     <section id="properties" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-heading">Prime Residences Plans</h2>
-            <div class="row">
-                <!-- Add plans dynamically -->
-                <div class="col-md-3">
+    <div class="container">
+        <h6 class="section-title text-center">OUR PLAN</h6>
+        <h2 class="section-heading text-center">PRIME RESIDENCES PLANS</h2>
+
+        <div class="row">
+            <!-- Plan 1 -->
+            <div class="col-md-3 plan-container">
+                <div class="plan-item">
                     <h5>3 BHK Apartment</h5>
-                    <img src="<?= Url::to('@web/web/assets/images/plan/ITQE.png'); ?>" alt="Plan 1" class="img-fluid">
-                    <a href="#" class="btn btn-secondary mt-3">Download Floor Plan</a>
+                    <div class="plan-image-wrapper">
+                        <img src="<?= Url::to('@web/web/assets/images/plan/ITQE.png'); ?>" alt="Plan 1" class="img-fluid">
+                        <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="col-md-3 plan-container">
+                <div class="plan-item">
                     <h5>3.5 BHK Apartment</h5>
-                    <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 2"
-                        class="img-fluid">
-                    <a href="#" class="btn btn-secondary mt-3">Download Floor Plan</a>
+                    <div class="plan-image-wrapper">
+                        <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 2" class="img-fluid">
+                        <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="col-md-3 plan-container">
+                <div class="plan-item">
                     <h5>4 BHK Apartment</h5>
-                    <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 3"
-                        class="img-fluid">
-                    <a href="#" class="btn btn-secondary mt-3">Download Floor Plan</a>
+                    <div class="plan-image-wrapper">
+                        <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 3" class="img-fluid">
+                        <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
+            </div>
+
+            <!-- Plan 4 -->
+            <div class="col-md-3 plan-container">
+                <div class="plan-item">
                     <h5>4 BHK Apartment</h5>
-                    <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 4"
-                        class="img-fluid">
-                    <a href="#" class="btn btn-secondary mt-3">Download Floor Plan</a>
+                    <div class="plan-image-wrapper">
+                        <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 4" class="img-fluid">
+                        <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
     <section class="luxury-residences">
         <div class="container">
-            <h2 class="section-heading">Stunning Luxury Prime Residences, Designed For Life</h2>
+        <h6 class="section-title text-center">Amenities</h6>
+        <h2 class="section-heading text-center">STUNNING LUXURY PRIME RESIDENCES, DESIGNED FOR LIFE</h2>
 
             <!-- Cards Container -->
             <div class="residence-slider">
                 <div class="residence-card-wrapper">
                     <!-- Card 1 -->
-                    <div class="residence-card">
+                    <div class="residence-card col-md-3">
+                    <div class='icon-container'>
+
                         <img src="<?= Url::to('@web/web/assets/images/amenities/icons/book.png'); ?>" alt="Icon 1"
                             class="residence-icon">
+                    </div>
                         <div class="residence-info">
                             <h3>Children’s Library</h3>
                             <p class="description">Spark young imaginations with a wealth of books and resources in the
@@ -278,9 +331,12 @@ use yii\helpers\Url;
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="residence-card">
+                    <div class="residence-card col-md-3">
+                    <div class='icon-container'>
+
                         <img src="<?= Url::to('@web/web/assets/images/amenities/icons/tower.png'); ?>" alt="Icon 2"
                             class="residence-icon">
+                    </div>
                         <div class="residence-info">
                             <h3>Tree Museum</h3>
                             <p class="description">The Tree Museum is an enchanting area that honours the extensive
@@ -289,9 +345,12 @@ use yii\helpers\Url;
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="residence-card">
+                    <div class="residence-card col-md-3">
+                    <div class='icon-container'>
+
                         <img src="<?= Url::to('@web/web/assets/images/amenities/icons/amphitheatre.png'); ?>"
                             alt="Icon 3" class="residence-icon">
+                    </div>
                         <div class="residence-info">
                             <h3>Amphitheatre</h3>
                             <p class="description">Witness unforgettable performances at the amphitheatre while enjoying
@@ -300,9 +359,12 @@ use yii\helpers\Url;
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="residence-card">
+                    <div class="residence-card col-md-3">
+                        <div class='icon-container'>
                         <img src="<?= Url::to('@web/web/assets/images/amenities/icons/swimming-pool.png'); ?>"
-                            alt="Icon 4" class="residence-icon">
+                        alt="Icon 4" class="residence-icon">
+                        </div>
+                       
                         <div class="residence-info">
                             <h3>Heated Pool</h3>
                             <p class="description">Dive into comfort with the heated pool, offering a luxurious swim
@@ -311,9 +373,12 @@ use yii\helpers\Url;
                     </div>
 
                     <!-- Card 5 -->
-                    <div class="residence-card">
+                    <div class="residence-card col-md-3">
+                    <div class='icon-container'>
+
                         <img src="<?= Url::to('@web/web/assets/images/amenities/icons/meditation.png'); ?>" alt="Icon 5"
                             class="residence-icon">
+                    </div>
                         <div class="residence-info">
                             <h3>Yoga Deck</h3>
                             <p class="description">Seek tranquillity on the yoga lawn and immerse yourself in the
@@ -331,7 +396,8 @@ use yii\helpers\Url;
 
     <section class="gallery-section">
         <div class="container">
-            <h2 class="section-heading">Once In A Lifetime Experience</h2>
+            <h6 class="section-title text-center">GALLERY</h6>
+            <h2 class="section-heading text-center">ONCE IN A LIFETIME EXPERIENCE</h2>
 
             <!-- Image Carousel Container -->
             <div class="gallery-slider">
@@ -369,50 +435,52 @@ use yii\helpers\Url;
         </div>
     </section>
     <section class="location-advantage">
-        <div class="container">
-            <div class="row">
-                <!-- Left Side: Map -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="map-container">
-                        <img src="<?= Url::to('@web/web/assets/images/map-location.png'); ?>" alt="Map Image"
-                            class="map-image">
-                    </div>
+    <div class="container">
+        <div class="row d-flex align-items-stretch">
+            <!-- Left Side: Map -->
+            <div class="col-lg-6 col-md-12 d-flex">
+                <div class="map-container flex-fill">
+                    <img src="<?= Url::to('@web/web/assets/images/map.png'); ?>" alt="Map Image" class="map-image">
                 </div>
+            </div>
 
-                <!-- Right Side: Title, Points, and Enquiry Button -->
-                <div class="col-lg-6 col-md-12 location-info">
-                    <h2 class="section-heading">Location Advantage</h2>
+            <!-- Right Side: Title, Points, and Enquiry Button -->
+            <div class="col-lg-6 col-md-12 location-info d-flex flex-column justify-content-between">
+                <div>
+                    <h6 class="section-title text-center">LOCATION ADVANTAGE</h6>
+                    <h2 class="section-heading text-center">STAY CONNECTED, COMFORTABLE AND CONVENIENT</h2>
 
                     <div class="location-points">
                         <div class="point">
-                            <span class="point-number">01</span>
-                            <p>Located next to NH 75 in Yeshwanthpur, West Bangalore, offering excellent connectivity.
-                            </p>
+                            <span class="point-number p-3">01</span>
+                            <p>Located next to NH 75 in Yeshwanthpur, West Bangalore, offering excellent connectivity.</p>
                         </div>
 
                         <div class="point">
-                            <span class="point-number">02</span>
+                            <span class="point-number p-3">02</span>
                             <p>Just a 2-minute stroll to Goraguntepalya metro station.</p>
                         </div>
 
                         <div class="point">
-                            <span class="point-number">03</span>
+                            <span class="point-number p-3">03</span>
                             <p>Only four apartments per floor with enhanced privacy and exclusivity.</p>
                         </div>
 
                         <div class="point">
-                            <span class="point-number">04</span>
+                            <span class="point-number p-3">04</span>
                             <p>Located next to the landmark People Tree Hospitals, offering medical services at your
                                 disposal without the worry of travel or city traffic.</p>
                         </div>
                     </div>
-
-                    <!-- Enquiry Button -->
-                    <a href="#enquiry" class="btn enquiry-btn">Enquire Now</a>
                 </div>
+
+                <!-- Enquiry Button -->
+                <a href="#enquiry" class="btn enquiry-btn">Enquire Now</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
     <section id="schedule-visit" class="schedule-visit py-5">
@@ -440,9 +508,9 @@ use yii\helpers\Url;
     </section>
 
     <section class="about-builder py-5 text-white">
-        <div class="container">
+        <div class="container about-container p-5">
             <h6 class="section-title text-center">BUILDER</h6>
-            <h3 class="section-heading text-center ">ABOUT BUILDER</h3>
+            <h3 class="section-heading text-center text-white">ABOUT BUILDER</h3>
             <p class="lead text-justify">
                 Total Environment has been a real estate and design leader for more than twenty years, committed to
                 producing outstanding spaces that elevate residential and commercial settings. Their goal is to create
@@ -465,39 +533,9 @@ use yii\helpers\Url;
   
 
 <div class="col-md-6">
-    <h5>Enquire Now</h5>
-    <form action="enquiry" method="POST">
-        <div class="form-group">
-            <label for="property">Select Property</label>
-            <select class="form-control" id="property" name="property" required>
-                <option value="" disabled selected>Select a property</option>
-                <option value="1">Property 1</option>
-                <option value="2">Property 2</option>
-                <option value="3">Property 3</option>
-            </select>
-        </div>
-        <div class="form-group position-relative">
-            <input type="text" class="form-control" id="name" name="name" required>
-            <span class="placeholder-icon"><i class="fas fa-user"></i> Name</span>
-        </div>
-        <div class="form-group position-relative">
-            <input type="email" class="form-control" id="email" name="email" required>
-            <span class="placeholder-icon"><i class="fas fa-envelope"></i> Email</span>
-        </div>
-        <div class="form-group position-relative">
-            <input type="text" class="form-control" id="country" name="country" required>
-            <span class="placeholder-icon"><i class="fas fa-flag"></i> Country</span>
-        </div>
-        <div class="form-group position-relative">
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-            <span class="placeholder-icon"><i class="fas fa-comment-dots"></i> Message</span>
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
-            <label class="form-check-label" for="consent">I agree to the terms and conditions</label>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Enquire Now</button>
-    </form>
+<?= $this->render('enquiry.php',['enquiry'=>$enquiry]) ?>
+
+
 </div>
 
                 <div class="col-md-6">

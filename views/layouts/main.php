@@ -26,12 +26,12 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUOrz/+zFHT5Qep6X1LTT56tZZPi8OWZq2lZjT" crossorigin="anonymous">
 
 <body class="d-flex flex-column h-100">
     <?php $this->beginBody() ?>
     <?= $this->render('/partials/alert.php') ?>
 
-    <?= $this->render('/partials/header.php') ?>
 
 
 

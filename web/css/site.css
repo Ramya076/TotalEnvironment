@@ -1,7 +1,3 @@
-main > .container {
-  padding: 70px 15px 20px;
-}
-
 html,
 body {
   font-family: "Poppins", "Open Sans";
@@ -10,6 +6,18 @@ body {
 .not-set {
   color: #c55;
   font-style: italic;
+}
+
+.nav-link,nav-link:hover {
+  color: white;
+}
+
+.navbar-brand img {
+  height: 50px; /* Adjust the logo height as needed */
+}
+
+#navbarNav .btn {
+  margin-left: 15px; 
 }
 
 /* add sorting icons to gridview sort links */
@@ -53,31 +61,6 @@ a.desc:after {
   margin: 0 0 15px 0;
 }
 
-/* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
-  padding-top: 7px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 767px) {
-  .nav li > form > button.logout {
-    display: block;
-    text-align: left;
-    width: 100%;
-    padding: 10px 0;
-  }
-}
-
-.nav > li > form > button.logout:focus,
-.nav > li > form > button.logout:hover {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.nav > li > form > button.logout:focus {
-  outline: none;
-}
-
 .form-group {
   margin-bottom: 1rem;
 }
@@ -92,14 +75,6 @@ h5 {
   color: #333;
 }
 
-.btn-primary {
-  background-color: #ffc107;
-  border-color: #ffc107;
-}
-
-.btn-primary:hover {
-  background-color: #e0a800;
-}
 
 .footer {
   background-color: #f5f5f5;
@@ -161,7 +136,7 @@ h5 {
   padding: 50px 0;
 }
 
-.schedule-visit{
+.schedule-visit {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -183,7 +158,6 @@ h5 {
 }
 
 .schedule-visit .btn-primary {
-  background-color: #007bff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -209,8 +183,8 @@ h5 {
 .map-image {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Location Information (Right Side) */
@@ -239,10 +213,9 @@ h5 {
 .point-number {
   font-size: 28px;
   font-weight: 700;
-  color: #007bff;
+  color: black;
   margin-right: 20px;
 }
-
 .point p {
   font-size: 18px;
   color: #666;
@@ -292,14 +265,11 @@ h5 {
   background-color: #f9f9f9;
 }
 
-
 /* Luxury Residences Section */
 .luxury-residences {
   padding: 50px 0;
   background-color: #f9f9f9;
 }
-
-
 
 /* Slider Container */
 .residence-slider {
@@ -313,7 +283,6 @@ h5 {
 
 /* Each card */
 .residence-card {
-  min-width: 250px; /* Fixed width for each card */
   flex-shrink: 0;
   background-color: #fff;
   border-radius: 10px;
@@ -321,12 +290,52 @@ h5 {
   padding: 20px;
   margin-right: 20px;
   text-align: center;
+  border: 1px solid #c5c5c5;
+}
+
+/* Default styling for larger screens */
+.icon-container {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #c5c5c5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  margin: 10px auto;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing transition */
 }
 
 .residence-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 15px;
+  width: 60%;
+  height: auto;
+  transition: width 0.3s ease; /* Smooth resizing transition */
+}
+
+/* Responsive Styling for Medium Devices (Tablets) */
+@media (max-width: 768px) {
+  .icon-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .residence-icon {
+    width: 50%;
+  }
+}
+
+/* Responsive Styling for Small Devices (Mobile) */
+@media (max-width: 576px) {
+  .icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .residence-icon {
+    width: 40%;
+  }
 }
 
 .residence-info h3 {
@@ -361,7 +370,7 @@ h5 {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 30px;
+    font-size: 12px;
   }
 
   .residence-card {
@@ -377,7 +386,6 @@ h5 {
   background-image: url("../assets/images/header.png"); /* Replace with actual path */
   background-size: cover;
   background-position: center;
-  padding: 150px 0; /* Increased padding for more spacing */
   color: white;
   position: relative;
 }
@@ -431,6 +439,34 @@ h5 {
   max-width: 450px;
   margin: 0 auto;
 }
+.appointment-form {
+  position: relative; /* For positioning close button */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+      background-image: url('../assets/images/mobile-header.png'); /* Mobile background */
+  }
+
+  .hero-content {
+      order: 1; /* Move hero content to the top */
+  }
+
+  .appointment-form {
+      order: 2; /* Move appointment form below hero content */
+  }
+}
 
 .form-wrapper h2 {
   font-size: 28px;
@@ -454,7 +490,6 @@ h5 {
 }
 
 .appointment-form .btn-block {
-  background-color: #007bff;
   color: white;
   padding: 12px 20px;
   text-transform: uppercase;
@@ -464,9 +499,6 @@ h5 {
   transition: background-color 0.3s ease;
 }
 
-.appointment-form .btn-block:hover {
-  background-color: #0056b3;
-}
 
 .appointment-form small {
   display: block;
@@ -499,7 +531,6 @@ h5 {
 }
 
 .btn-enquiry {
-  background-color: #007bff;
   color: white;
   padding: 12px 25px;
   text-transform: uppercase;
@@ -510,9 +541,6 @@ h5 {
   transition: background-color 0.3s ease;
 }
 
-.btn-enquiry:hover {
-  background-color: #0056b3;
-}
 
 /* Image Card Styles */
 .overview-images {
@@ -718,44 +746,70 @@ h5 {
 
 /* Apartment Card Styling */
 .apartment-card {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.apartment-card:hover {
-  transform: translateY(-10px); /* Slight lift on hover */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+.apartment-card {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Apartment Image */
-.apartment-img {
-  width: 100%;
-  height: 220px; /* Fixed height for consistency */
-  object-fit: cover; /* Ensures image scales correctly */
-}
-
-/* Apartment Info */
-.apartment-info {
-  padding: 20px;
-  text-align: center;
-}
-
-.apartment-info h3 {
+/* Title Styling */
+.apartment-card .card-title {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
+  color: white; /* Change the title color */
 }
 
-.apartment-info .price {
-  font-size: 20px;
-  font-weight: 500;
-  color: #007bff; /* Primary blue color for price */
+/* Points Container Styling */
+.points-container {
   margin-bottom: 20px;
+}
+
+.points {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  box-shadow: 1px 6px 24.9px 3px #00000021;
+}
+
+/* Enquiry Button and Number Styling */
+.enquire-btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background-color: #0056b3;
+}
+
+.card-number {
+  font-size: 48px;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .apartment-card .card-title {
+    font-size: 20px;
+  }
+
+  .points {
+    font-size: 14px;
+  }
+
+  .card-number {
+    font-size: 36px;
+  }
 }
 
 /* Features List */
@@ -805,6 +859,9 @@ h5 {
   .apartment-info .price {
     font-size: 18px;
   }
+  .apartment-card .points {
+    box-shadow: 1px 6px 24.9px 3px #00000021;
+  }
 
   .features-list li {
     font-size: 15px;
@@ -815,8 +872,6 @@ h5 {
   padding: 50px 0;
   background-color: #f9f9f9;
 }
-
-
 
 /* Gallery Slider */
 .gallery-slider {
@@ -862,7 +917,7 @@ h5 {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 30px;
+    font-size: 12px;
   }
 
   .gallery-image {
@@ -904,13 +959,11 @@ h5 {
 .section-title {
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
   text-align: left;
 }
 .section-heading {
   font-size: 32px;
   font-weight: bold;
-  line-height: 41.6px;
   text-align: left;
   text-transform: capitalize;
   color: #607a68;
@@ -921,13 +974,6 @@ h5 {
   padding: 80px 0;
   background-color: #f8f8f8;
   text-align: center;
-}
-
-.section-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #3a3a3a;
 }
 
 /* Budget Card Styling */
@@ -954,8 +1000,9 @@ h5 {
 .card-title {
   font-size: 24px;
   font-weight: 600;
-  color: #333;
+  background-color: #607a68;
   margin-bottom: 15px;
+  color: white;
 }
 
 .configuration,
@@ -996,7 +1043,7 @@ h5 {
   font-size: 48px;
   font-weight: bold;
   color: #e0e0e0;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Responsive Adjustments */
@@ -1050,4 +1097,121 @@ input:not(:placeholder-shown) + .placeholder-icon,
 textarea:focus + .placeholder-icon,
 textarea:not(:placeholder-shown) + .placeholder-icon {
   color: #3a3a3a; /* Change color when focused or filled */
+}
+.position-relative {
+  position: relative;
+}
+
+.placeholder-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.form-group .form-control {
+  padding-left: 40px; /* Add padding to make room for the icons */
+}
+.about-container {
+  box-shadow: -56.13px 56.13px 56.13px 0px #ffffff1a inset;
+
+  box-shadow: 56.13px -56.13px 56.13px 0px #c2c2c21a inset;
+
+  backdrop-filter: blur(112.26667022705078px);
+}
+.location-points .point {
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 1px 7.3px 1px #00000012;
+  font-size: 11px;
+  font-weight: 300;
+  text-align: justified;
+}
+
+.location-advantage .row {
+  display: flex;
+  align-items: stretch; /* Ensures that both columns have the same height */
+}
+
+.map-container {
+  flex: 1; /* Ensures that the map takes full height of the column */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the map image */
+}
+
+.map-image {
+  width: 100%; /* Makes the image responsive */
+  height: auto;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the "Enquire Now" button sticks to the bottom */
+}
+
+.point {
+  margin-bottom: 20px;
+}
+
+.enquiry-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+#properties h5 {
+  border: 1px solid #889f8f;
+  border-radius: 15px;
+  background-color: #000;
+  color: white;
+  padding: 3px;
+}
+
+/* Plan Container Styling */
+.plan-container {
+  margin-bottom: 30px;
+}
+
+.plan-item {
+  text-align: center;
+  position: relative;
+}
+
+/* Plan Image Wrapper */
+.plan-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Download Button (Overlay) */
+.plan-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+  /* On mobile, move the button below the image */
+  .plan-btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    opacity: 1;
+    margin-top: 10px;
+  }
+
+  .plan-image-wrapper:hover img {
+    opacity: 1; /* Reset the dimming effect on mobile */
+  }
+
+  .plan-image-wrapper:hover .plan-btn {
+    opacity: 1; /* Ensure button is always visible on mobile */
+  }
 }

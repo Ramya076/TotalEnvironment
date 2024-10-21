@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use yii\web\ForbiddenHttpException;
 use app\models\User;
 use app\models\AppointmentForm;
+use app\models\Enquiry;
 
 class SiteController extends Controller
 {
@@ -79,6 +80,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = new AppointmentForm();
+        $enquiry = new Enquiry();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // Process form (e.g., send email, save to DB, etc.)
@@ -87,10 +89,25 @@ class SiteController extends Controller
         }
         return $this->render('index', [
             'model' => $model,
+            'enquiry'=>$enquiry
         ]);
 
     }
+    public function actionAppointment()
+    {
+        $model = new AppointmentForm();
+        $enquiry = new Enquiry();
 
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            // Process form (e.g., send email, save to DB, etc.)
+            Yii::$app->session->setFlash('success', 'Your appointment has been booked successfully.');
+            return $this->refresh();
+        }
+       
+
+    }
+
+    
     /**
      * Login action.
      *
@@ -132,17 +149,15 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionContact()
+    public function actionEnquiry()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
+        $model = new Enquiry();
+        if ($model->load(Yii::$app->request->post())) {
+            Yii::$app->session->setFlash('Enquiry');
 
             return $this->refresh();
         }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
+       
     }
         
     /**
