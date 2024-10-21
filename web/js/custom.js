@@ -375,9 +375,3 @@ function getQueryParams() {
     }
     return queryParams;
 }
-
-
-
-
-
-

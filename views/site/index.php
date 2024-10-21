@@ -1,4 +1,5 @@
 <?php
+
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -178,50 +179,50 @@ use yii\helpers\Url;
 
 
     <section class="quality-budget">
-    <div class="container">
-        <!-- Section Title -->
-         <h6 class="section-heading"></h6>
-        <h2 class="section-heading">QUALITY THAT FITS YOUR BUDGET</h2>
+        <div class="container">
+            <!-- Section Title -->
+            <h6 class="section-heading"></h6>
+            <h2 class="section-heading">QUALITY THAT FITS YOUR BUDGET</h2>
 
-        <div class="row">
-            <!-- Apartment Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="apartment-card">
-                    <h3 class="card-title">Apartments</h3>
-                    <p class="configuration">Configuration</p>
-                    <p class="price">Size Starting From 3 BHK | 2300 Sq.Ft</p>
-                    <p class="price-start">Price Start From: 7.85 Cr*</p>
-                    <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
-                    <div class="card-number">01</div>
+            <div class="row">
+                <!-- Apartment Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="apartment-card">
+                        <h3 class="card-title">Apartments</h3>
+                        <p class="configuration">Configuration</p>
+                        <p class="price">Size Starting From 3 BHK | 2300 Sq.Ft</p>
+                        <p class="price-start">Price Start From: 7.85 Cr*</p>
+                        <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="card-number">01</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Apartment Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="apartment-card">
-                    <h3 class="card-title">Apartments</h3>
-                    <p class="configuration">Configuration</p>
-                    <p class="price">Size Starting From 3 BHK | 2750 Sq.Ft</p>
-                    <p class="price-start">Price Start From: 8.25 Cr*</p>
-                    <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
-                    <div class="card-number">02</div>
+                <!-- Apartment Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="apartment-card">
+                        <h3 class="card-title">Apartments</h3>
+                        <p class="configuration">Configuration</p>
+                        <p class="price">Size Starting From 3 BHK | 2750 Sq.Ft</p>
+                        <p class="price-start">Price Start From: 8.25 Cr*</p>
+                        <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="card-number">02</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Apartment Card 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="apartment-card">
-                    <h3 class="card-title">Apartments</h3>
-                    <p class="configuration">Configuration</p>
-                    <p class="price">Size Starting From 4 BHK | 3100 Sq.Ft</p>
-                    <p class="price-start">Price Start From: 9.35 Cr*</p>
-                    <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
-                    <div class="card-number">03</div>
+                <!-- Apartment Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="apartment-card">
+                        <h3 class="card-title">Apartments</h3>
+                        <p class="configuration">Configuration</p>
+                        <p class="price">Size Starting From 4 BHK | 3100 Sq.Ft</p>
+                        <p class="price-start">Price Start From: 9.35 Cr*</p>
+                        <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="card-number">03</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Highlighted Properties Section -->
@@ -321,11 +322,9 @@ use yii\helpers\Url;
                     </div>
                 </div>
             </div>
-
-            <!-- Arrow Controls Below the Cards -->
             <div class="arrow-container">
-                <span class="arrow left-arrow">&#10094;</span> <!-- Left Arrow -->
-                <span class="arrow right-arrow">&#10095;</span> <!-- Right Arrow -->
+                <span class="arrow left-arrow" data-direction="left">&#10094;</span> <!-- Left Arrow -->
+                <span class="arrow right-arrow" data-direction="right">&#10095;</span> <!-- Right Arrow -->
             </div>
         </div>
     </section>
@@ -363,11 +362,9 @@ use yii\helpers\Url;
                     </div>
                 </div>
             </div>
-
-            <!-- Arrow Controls Below the Gallery -->
             <div class="arrow-container">
-                <span class="arrow left-arrow">&#10094;</span> <!-- Left Arrow -->
-                <span class="arrow right-arrow">&#10095;</span> <!-- Right Arrow -->
+                <span class="arrow left-arrow" data-direction="left">&#10094;</span> <!-- Left Arrow -->
+                <span class="arrow right-arrow" data-direction="right">&#10095;</span> <!-- Right Arrow -->
             </div>
         </div>
     </section>
@@ -465,30 +462,45 @@ use yii\helpers\Url;
 
 
             <div class="row mb-5">
-                <div class="col-md-8">
-                    <h5>Enquire Now</h5>
-                    <form action="enquiry" method="POST">
-                        <div class="form-group">
-                            <label for="property">Select Property</label>
-                            <select class="form-control" id="property" name="property">
-                                <option value="1">Property 1</option>
-                                <option value="2">Property 2</option>
-                                <option value="3">Property 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <button type="submit" class="btn mt-3">Enquire Now</button>
-                    </form>
-                </div>
+  
 
-                <div class="col-md-4">
+<div class="col-md-6">
+    <h5>Enquire Now</h5>
+    <form action="enquiry" method="POST">
+        <div class="form-group">
+            <label for="property">Select Property</label>
+            <select class="form-control" id="property" name="property" required>
+                <option value="" disabled selected>Select a property</option>
+                <option value="1">Property 1</option>
+                <option value="2">Property 2</option>
+                <option value="3">Property 3</option>
+            </select>
+        </div>
+        <div class="form-group position-relative">
+            <input type="text" class="form-control" id="name" name="name" required>
+            <span class="placeholder-icon"><i class="fas fa-user"></i> Name</span>
+        </div>
+        <div class="form-group position-relative">
+            <input type="email" class="form-control" id="email" name="email" required>
+            <span class="placeholder-icon"><i class="fas fa-envelope"></i> Email</span>
+        </div>
+        <div class="form-group position-relative">
+            <input type="text" class="form-control" id="country" name="country" required>
+            <span class="placeholder-icon"><i class="fas fa-flag"></i> Country</span>
+        </div>
+        <div class="form-group position-relative">
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            <span class="placeholder-icon"><i class="fas fa-comment-dots"></i> Message</span>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
+            <label class="form-check-label" for="consent">I agree to the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Enquire Now</button>
+    </form>
+</div>
+
+                <div class="col-md-6">
                     <!-- Map Section -->
                     <h5>Location Map</h5>
                     <div id="map-container">
@@ -501,73 +513,6 @@ use yii\helpers\Url;
     </section>
 </div>
 <script>
-    $(document).ready(function () {
-        const cardWrapper = $('.residence-card-wrapper');
-        const cardWidth = $('.residence-card').outerWidth(true); // Card width including margin
-        const totalCards = $('.residence-card').length;
-        const visibleCards = Math.floor($('.residence-slider').width() / cardWidth);
-        let currentCardIndex = 0; // Renamed variable for clarity
-
-        // Left Arrow Click Event for Cards
-        $('.left-arrow-cards').click(function () {
-            if (currentCardIndex > 0) {
-                currentCardIndex--;
-            } else {
-                currentCardIndex = totalCards - visibleCards; // Loop to last set of cards
-            }
-            updateSliderPosition();
-        });
-
-        // Right Arrow Click Event for Cards
-        $('.right-arrow-cards').click(function () {
-            if (currentCardIndex < totalCards - visibleCards) {
-                currentCardIndex++;
-            } else {
-                currentCardIndex = 0; // Loop back to the first set of cards
-            }
-            updateSliderPosition();
-        });
-
-        // Update Slider Position for Cards
-        function updateSliderPosition() {
-            const newPosition = -currentCardIndex * cardWidth; // Calculate new translateX position
-            cardWrapper.css('transform', `translateX(${newPosition}px)`);
-        }
-
-        // Gallery Slider
-        const galleryWrapper = $('.gallery-wrapper');
-        const imageWidth = $('.gallery-image').outerWidth(true); // Image width including margin
-        const totalImages = $('.gallery-image').length;
-        const visibleImages = Math.floor($('.gallery-slider').width() / imageWidth);
-        let currentImageIndex = 0; // Renamed variable for clarity
-
-        // Left Arrow Click Event for Gallery
-        $('.left-arrow-gallery').click(function () {
-            if (currentImageIndex > 0) {
-                currentImageIndex--;
-            } else {
-                currentImageIndex = totalImages - visibleImages; // Loop to last set of images
-            }
-            updateGalleryPosition();
-        });
-
-        // Right Arrow Click Event for Gallery
-        $('.right-arrow-gallery').click(function () {
-            if (currentImageIndex < totalImages - visibleImages) {
-                currentImageIndex++;
-            } else {
-                currentImageIndex = 0; // Loop back to the first set of images
-            }
-            updateGalleryPosition();
-        });
-
-        // Update Gallery Position
-        function updateGalleryPosition() {
-            const newPosition = -currentImageIndex * imageWidth; // Calculate new translateX position
-            galleryWrapper.css('transform', `translateX(${newPosition}px)`);
-        }
-    });
-
 
 
 

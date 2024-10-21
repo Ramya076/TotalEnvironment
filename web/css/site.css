@@ -114,7 +114,6 @@ h5 {
 }
 
 .footer .footer-content {
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -162,7 +161,7 @@ h5 {
   padding: 50px 0;
 }
 
-.schedule-visit .section-title {
+.schedule-visit{
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -293,12 +292,6 @@ h5 {
   background-color: #f9f9f9;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 50px; /* Space below the title */
-}
 
 /* Luxury Residences Section */
 .luxury-residences {
@@ -306,12 +299,7 @@ h5 {
   background-color: #f9f9f9;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+
 
 /* Slider Container */
 .residence-slider {
@@ -384,7 +372,6 @@ h5 {
     font-size: 20px;
   }
 }
-
 
 .hero-section {
   background-image: url("../assets/images/header.png"); /* Replace with actual path */
@@ -829,12 +816,7 @@ h5 {
   background-color: #f9f9f9;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+
 
 /* Gallery Slider */
 .gallery-slider {
@@ -925,113 +907,147 @@ h5 {
   line-height: 21px;
   text-align: left;
 }
-.section-heading{
-font-size: 32px;
-font-weight: bold;
-line-height: 41.6px;
-text-align: left;
-text-transform: capitalize;
-color: #607A68;
-
-
+.section-heading {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 41.6px;
+  text-align: left;
+  text-transform: capitalize;
+  color: #607a68;
 }
 
 /* Quality That Fits Your Budget Section */
 .quality-budget {
-    padding: 80px 0;
-    background-color: #f8f8f8;
-    text-align: center;
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #3a3a3a;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #3a3a3a;
 }
 
 /* Budget Card Styling */
 .budget-card {
-    background-color: #fff;
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    position: relative;
-    transition: transform 0.3s ease;
-    overflow: hidden;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .budget-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .card-content {
-    padding: 40px 30px;
-    background-color: #f1f3f4; /* Card background color */
+  padding: 40px 30px;
+  background-color: #f1f3f4; /* Card background color */
 }
 
 .card-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.configuration, .price, .price-start {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
+.configuration,
+.price,
+.price-start {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
 .price-start {
-    font-weight: bold;
-    color: #007bff;
+  font-weight: bold;
+  color: #007bff;
 }
 
 .enquire-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .enquire-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Card Number Styling */
 .card-number {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    font-size: 48px;
-    font-weight: bold;
-    color: #e0e0e0;
-    z-index: -1;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #e0e0e0;
+  z-index: -1;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .budget-card {
-        margin-bottom: 20px;
-    }
+  .budget-card {
+    margin-bottom: 20px;
+  }
 
-    .card-number {
-        font-size: 36px;
-    }
+  .card-number {
+    font-size: 36px;
+  }
 }
-.about-builder{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+.about-builder {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/images/about.png") no-repeat center center;
   background-size: cover;
   display: flex; /* Enable flexbox */
   flex-direction: column; /* Arrange children vertically */
   align-items: center;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.placeholder-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px; /* Adjust as necessary */
+  color: #888; /* Icon color */
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent interaction with the placeholder */
+  transition: 0.2s ease all; /* Animation for placeholder */
+}
+
+input,
+textarea {
+  padding-left: 40px; /* Add padding for the icon */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: transparent; /* Hide default placeholder */
+}
+
+input:focus + .placeholder-icon,
+input:not(:placeholder-shown) + .placeholder-icon,
+textarea:focus + .placeholder-icon,
+textarea:not(:placeholder-shown) + .placeholder-icon {
+  color: #3a3a3a; /* Change color when focused or filled */
 }
