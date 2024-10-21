@@ -1,0 +1,1037 @@
+main > .container {
+  padding: 70px 15px 20px;
+}
+
+html,
+body {
+  font-family: "Poppins", "Open Sans";
+}
+
+.not-set {
+  color: #c55;
+  font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after,
+a.desc:after {
+  content: "";
+  left: 3px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  margin: 4px 4px 2px 4px;
+  background: transparent;
+}
+
+a.asc:after {
+  border-bottom: solid 7px #212529;
+  border-top-width: 0;
+}
+
+a.desc:after {
+  border-top: solid 7px #212529;
+  border-bottom-width: 0;
+}
+
+.grid-view th {
+  white-space: nowrap;
+}
+
+.hint-block {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+}
+
+.error-summary {
+  color: #a94442;
+  background: #fdf7f7;
+  border-left: 3px solid #eed3d7;
+  padding: 10px 20px;
+  margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+  padding-top: 7px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .nav li > form > button.logout {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h5 {
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer .srpl-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer .footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer .footer-text {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.footer .footer-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #999;
+}
+
+.schedule-visit {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.schedule-visit .section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.schedule-visit p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.schedule-visit .form-group {
+  margin-bottom: 15px;
+}
+
+.schedule-visit .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.schedule-visit .btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.schedule-visit .img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Location Advantage Section */
+.location-advantage {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+/* Map Styling */
+.map-container {
+  text-align: center;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+/* Location Information (Right Side) */
+.location-info {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.location-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Points Styling */
+.location-points {
+  margin-bottom: 30px;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.point-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+  margin-right: 20px;
+}
+
+.point p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+/* Enquiry Button */
+.enquiry-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .location-info {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .location-title {
+    font-size: 30px;
+  }
+
+  .point-number {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .enquiry-btn {
+    font-size: 16px;
+  }
+}
+
+/* Stunning Luxury Prime Residences Section */
+.luxury-residences {
+  padding: 80px 0; /* Space around the section */
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px; /* Space below the title */
+}
+
+/* Luxury Residences Section */
+.luxury-residences {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Slider Container */
+.residence-slider {
+  overflow: hidden; /* Hide overflowing cards */
+}
+
+.residence-card-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition when sliding */
+}
+
+/* Each card */
+.residence-card {
+  min-width: 250px; /* Fixed width for each card */
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.residence-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.residence-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.residence-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Arrow Controls Below the Slider */
+.arrow-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .residence-card {
+    min-width: 220px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+}
+
+
+.hero-section {
+  background-image: url("../assets/images/header.png"); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0; /* Increased padding for more spacing */
+  color: white;
+  position: relative;
+}
+
+.hero-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 550px; /* Adjust max width to match the design */
+}
+
+.hero-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+
+.hero-description {
+  font-size: 20px; /* Slightly increased description font size */
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.hero-cta-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 25px; /* Button padding for better balance */
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.hero-cta-btn:hover {
+  background-color: #0056b3;
+}
+
+.appointment-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.form-wrapper h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.appointment-form .form-group {
+  margin-bottom: 20px;
+}
+
+.appointment-form input,
+.appointment-form textarea,
+.appointment-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-form .btn-block {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-form .btn-block:hover {
+  background-color: #0056b3;
+}
+
+.appointment-form small {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Overview Section Styles */
+.overview-section {
+  padding: 80px 0; /* Adjust padding for space around the section */
+  background-color: #f9f9f9;
+}
+
+.overview-section .overview-content {
+  max-width: 550px; /* Set max width to limit content width */
+}
+
+.overview-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.overview-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.btn-enquiry {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enquiry:hover {
+  background-color: #0056b3;
+}
+
+/* Image Card Styles */
+.overview-images {
+  text-align: center;
+}
+
+.image-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Gap between images */
+}
+
+.overview-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adding a shadow effect for images */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.overview-img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .overview-section {
+    padding: 40px 0;
+  }
+
+  .overview-content {
+    margin-bottom: 40px; /* Ensure content has space above/below on mobile */
+  }
+
+  .image-card {
+    justify-content: center; /* Center images on mobile */
+  }
+}
+/* Values Section Styling */
+.values-section {
+  padding: 80px 0; /* Adjust for spacing around the section */
+  background-color: #ffffff;
+}
+
+.values-image {
+  text-align: center; /* Center the image */
+}
+
+.values-image img {
+  width: 100%; /* Make the image responsive */
+  max-width: 500px; /* Set a max width for large screens */
+  border-radius: 10px; /* Optional: Rounded corners for image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.values-content {
+  padding-left: 40px; /* Space between image and content on desktop */
+}
+
+.values-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.values-list {
+  margin-top: 20px;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.value-icon {
+  width: 50px; /* Icon size */
+  height: 50px; /* Icon size */
+  margin-right: 20px; /* Space between icon and text */
+}
+
+.value-item p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0; /* Reset margin for better alignment */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .values-section {
+    padding: 40px 0;
+  }
+
+  .values-content {
+    padding-left: 0; /* Remove padding for mobile */
+    text-align: center; /* Center the content on smaller screens */
+  }
+
+  .value-item {
+    justify-content: center; /* Center each item */
+    text-align: left; /* Align text left under the icon */
+  }
+
+  .value-icon {
+    margin-right: 15px; /* Reduce space between icon and text on mobile */
+  }
+}
+/* Price List Section */
+.price-list-section {
+  padding: 80px 0; /* Space around the section */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.price-list-section h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px; /* Space below the heading */
+}
+
+/* Price Card Styling */
+.price-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for card depth */
+  text-align: center; /* Center content in the card */
+  margin-bottom: 30px; /* Space between cards */
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-10px); /* Hover effect: slight lift */
+}
+
+.price-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.price-card .price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #007bff; /* Primary blue color for price */
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Enquiry Button */
+.enquiry-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .price-card {
+    padding: 20px;
+  }
+
+  .price-list-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .price-card h3 {
+    font-size: 22px;
+  }
+
+  .price-card .price {
+    font-size: 18px;
+  }
+
+  .features-list li {
+    font-size: 15px;
+  }
+}
+
+/* Apartment Card Styling */
+.apartment-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apartment-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Apartment Image */
+.apartment-img {
+  width: 100%;
+  height: 220px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image scales correctly */
+}
+
+/* Apartment Info */
+.apartment-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.apartment-info h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.apartment-info .price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #007bff; /* Primary blue color for price */
+  margin-bottom: 20px;
+}
+
+/* Features List */
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Enquiry Button */
+.enquiry-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .apartment-img {
+    height: 180px; /* Adjust image height for mobile */
+  }
+
+  .quality-budget-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .apartment-info h3 {
+    font-size: 20px;
+  }
+
+  .apartment-info .price {
+    font-size: 18px;
+  }
+
+  .features-list li {
+    font-size: 15px;
+  }
+}
+/* Gallery Section */
+.gallery-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Gallery Slider */
+.gallery-slider {
+  overflow: hidden; /* Hide overflowing images */
+}
+
+.gallery-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each Gallery Image */
+.gallery-image {
+  min-width: 300px; /* Adjust as per the image size */
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.gallery-image img {
+  width: 100%;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+/* Arrow Controls */
+.arrow-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .gallery-image {
+    min-width: 250px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+}
+.hero-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/header.png") no-repeat center center;
+  background-size: cover;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center;
+}
+.hero-content ul li {
+  list-style: none;
+}
+.btn {
+  background-color: #607a68 !important;
+  border-radius: 10px !important;
+}
+.dotted-border {
+  border: 1px dotted #607a68; /* Adjust the border thickness and color */
+  padding: 10px; /* Space inside the border */
+  margin: 20px; /* Space outside the border */
+}
+.hero-cta-btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+.section-heading{
+font-size: 32px;
+font-weight: bold;
+line-height: 41.6px;
+text-align: left;
+text-transform: capitalize;
+color: #607A68;
+
+
+}
+
+/* Quality That Fits Your Budget Section */
+.quality-budget {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #3a3a3a;
+}
+
+/* Budget Card Styling */
+.budget-card {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.budget-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-content {
+    padding: 40px 30px;
+    background-color: #f1f3f4; /* Card background color */
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.configuration, .price, .price-start {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price-start {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.enquire-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.enquire-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Card Number Styling */
+.card-number {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #e0e0e0;
+    z-index: -1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .budget-card {
+        margin-bottom: 20px;
+    }
+
+    .card-number {
+        font-size: 36px;
+    }
+}
+.about-builder{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/about.png") no-repeat center center;
+  background-size: cover;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center;
+}
