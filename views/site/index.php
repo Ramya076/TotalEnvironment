@@ -11,10 +11,15 @@ use yii\helpers\Url;
 
     <div class="hero-section">
         <?= $this->render('/partials/header.php') ?>
+        <div class="mobile-image-container d-block d-sm-none w-100">
+            <img src="<?= Url::to('@web/web/assets/images/mobile-header.png'); ?>" class="w-100"
+                alt="Mobile Header Image">
+        </div>
+
 
         <div class="row align-items-center">
             <!-- Hero Content Section -->
-            <div class="col-lg-6 col-md-12 hero-content m-auto">
+            <div class="col-lg-6 col-md-6 order-1 hero-content m-auto">
                 <h6 class="hero-title">IS THAT QUITE EARTH</h6>
 
                 <p>Avalahalli Main Road, Off Hennur Road, North Bangalore</p>
@@ -22,45 +27,68 @@ use yii\helpers\Url;
 
                 <a href="#book" class="btn hero-cta-btn m-auto">Starting From 3.85 Cr*</a>
                 <ul class="dotted-border">
-                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 50,000 sq. ft. Clubhouse</li>
-                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Treetop Walkway</li>
-                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 3 BHK earth-sheltered villas</li>
-                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Lush Landscape with scenic views</li>
-                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> State-of-the-art 24/7 security</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 50,000 sq. ft.
+                        Clubhouse</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Treetop
+                        Walkway</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> 3 BHK
+                        earth-sheltered villas</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span> Lush Landscape
+                        with scenic views</li>
+                    <li><span><img src="<?= Url::to('@web/web/assets/images/icons/Star.png'); ?>"></span>
+                        State-of-the-art 24/7 security</li>
                 </ul>
             </div>
 
             <!-- Appointment Form Section -->
-            <div class="col-lg-6 col-md-12 appointment-form" id="book">
-                <!-- Close Button -->
+            <div class="col-lg-6 col-md-6 order-2 mb-5" id="book">
 
-                <h2>Book an Appointment</h2>
-                <?php $form = ActiveForm::begin(); ?>
+                <h2 class="form-header card-title p-2 text-center text-light">Book an Appointment</h2>
+                <div class="appointment-form"> <?php $form = ActiveForm::begin(); ?>
 
-                <?= $form->field($model, 'project')->dropDownList([
-                    'In That Quiet Earth' => 'In That Quiet Earth',
-                    'Pursuit of a Radical Rhapsody' => 'Pursuit of a Radical Rhapsody',
-                ], ['prompt' => 'Choose Project'])->label(false) ?>
+                    <?= $form->field($model, 'project', [
+    'template' => '<div class="input-icon-wrapper"><img src="' . Url::to('@web/web/assets/images/icons/plan.png') . '" alt="icon" class="input-icon"><div class="separator"></div>{input}{hint}{error}</div>',
+])->dropDownList([
+    '1' => 'In That Quiet Earth',
+    '2' => 'Total Environment',
+], [
+    'prompt' => 'Choose Project',
+    'class' => 'form-control', // Add any classes you need
+])->label(false) ?>
 
-                <?= $form->field($model, 'name')->textInput(['placeholder' => 'Your Name'])->label(false) ?>
-                <?= $form->field($model, 'email')->textInput(['placeholder' => 'Your Email'])->label(false) ?>
-                <?= $form->field($model, 'phone')->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
-                <?= $form->field($model, 'message')->textarea(['rows' => 4, 'placeholder' => 'Message'])->label(false) ?>
-                <div class="form-group form-check col-md-12 d-flex">
-                    <input type="checkbox" id="consent-checkbox" required>
-                    <label for="consent-checkbox">
-                        <small>I authorize Company representative to Call, SMS, Email, or Whatsapp me about the products and offers. This consent overrides any registration for DNC/NDNC.</small>
-                    </label>
+
+
+                    <?= $form->field($model, 'name', [
+    'template' => '<img src="' . Url::to('@web/web/assets/images/icons/user.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
+])->textInput(['placeholder' => 'Name']); ?>
+
+
+
+                    <?= $form->field($model, 'email', [
+                            'template' => '<img src="' . Url::to('@web/web/assets/images/icons/mail.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
+                        ])->textInput(['placeholder' => 'Your Email'])->label(false) ?>
+                    <?= $form->field($model, 'phone', [
+                        'template' => '<img src="' . Url::to('@web/web/assets/images/icons/flag.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
+                    ])->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
+                    <?= $form->field($model, 'message')->textarea(['rows' =>2, 'placeholder' => 'Message'])->label(false) ?>
+                    <div class="form-group form-check col-md-12 d-flex align-items-center">
+                        <input type="checkbox" id="consent-checkbox" class="mr-2" required>
+                        <label for="consent-checkbox" class="mb-0">
+                            <small>I authorize Company representative to Call, SMS, Email, or Whatsapp me about the
+                                products
+                                and offers. This consent overrides any registration for DNC/NDNC.</small>
+                        </label>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <?= Html::submitButton('Submit Now', ['class' => 'btn btn-block form-control']) ?>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
+                    <button class="close-btn" onclick="closeForm()">✖</button>
                 </div>
-
-
-                <div class="form-group">
-                    <?= Html::submitButton('Submit Now', ['class' => 'btn btn-block']) ?>
-                </div>
-
-                <?php ActiveForm::end(); ?>
-                <button class="close-btn" onclick="closeForm()">✖</button>
-
             </div>
 
         </div>
@@ -74,9 +102,9 @@ use yii\helpers\Url;
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Side: Content and Enquiry Button -->
-                <div class="col-lg-6 col-md-12 overview-content">
+                <div class="col-lg-6 col-md-12 overview-content order-sm-2 order-lg-1">
                     <h6 class="section-title">OVERVIEW</h6>
-                    <h2 class="section-heading">In That Quiet Earth</h2>
+                    <h2 class="section-heading">IN THAT QUIET EARTH</h2>
                     <p>In the fast-growing North Bangalore region, In That Quiet Earth by Total Environment is a lavish
                         housing development situated on Avalahalli Main Road, near Hennur Road. The expansion provides
                         large 2, 3, and 4 BHK residences ranging from 1,431 to 3,188 sq. ft., with pricing beginning at
@@ -92,22 +120,22 @@ use yii\helpers\Url;
                 </div>
 
                 <!-- Right Side: Card with 4 Images -->
-                <div class="col-lg-6 col-md-12 overview-images">
+                <div class="col-lg-6 col-md-12 overview-images order-sm-1 order-lg-2">
                     <div class="image-card">
                         <div class="row">
                             <div class="col-sm-6">
                                 <img src="<?= Url::to('@web/web/assets/images/overview/image1.png'); ?>" alt="Image 1"
                                     class="overview-img">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 d-none d-md-block ">
                                 <img src="<?= Url::to('@web/web/assets/images/overview/image2.png'); ?>" alt="Image 2"
                                     class="overview-img">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 d-none d-md-block">
                                 <img src="<?= Url::to('@web/web/assets/images/overview/image3.png'); ?>" alt="Image 3"
                                     class="overview-img">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 d-none d-md-block">
                                 <img src="<?= Url::to('@web/web/assets/images/overview/image4.png'); ?>" alt="Image 4"
                                     class="overview-img">
                             </div>
@@ -121,59 +149,62 @@ use yii\helpers\Url;
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Side: Image -->
-                <div class="col-lg-6 col-md-12 values-image">
+                <div class="col-lg-6 col-md-12 order-lg-1 order-md-2 values-image">
                     <img src="<?= Url::to('@web/web/assets/images/highlight/image1.png'); ?>" alt="Intelligent Living"
                         class="img-fluid">
                 </div>
 
                 <!-- Right Side: Heading and Points -->
-                <div class="col-lg-6 col-md-12 values-content">
+                <div class="col-lg-6 col-md-12 order-lg-2 order-md-1 values-content">
                     <h6 class="section-title">HIGHLIGHTS</h6>
                     <h2 class="section-heading">VALUES OF INTELLIGENT LIVING IN OUR HOMES</h2>
 
                     <div class="values-list">
                         <!-- Each point with icon -->
-                        <div class="value-item">
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/office.png'); ?>"
                                 alt="Smart Design Icon" class="value-icon">
                             <p>4 Apartments Per Floor with Green Lobby</p>
                         </div>
 
-                        <div class="value-item">
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/night-club.png'); ?>"
                                 alt="Energy Efficiency Icon" class="value-icon">
                             <p>Rooftop Clubhouse with Infinity Pool + Ground Floor Clubhouse G+2</p>
                         </div>
 
-                        <div class="value-item">
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/floor.png'); ?>"
                                 alt="Green Living Icon" class="value-icon">
                             <p>Wooden Floor and Italian Marble Tiles</p>
                         </div>
 
-                        <div class="value-item">
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/window.png'); ?>"
                                 alt="Home Automation Icon" class="value-icon">
                             <p>Double Glass Window Soundproof Apartment</p>
                         </div>
-                        <div class="value-item">
+
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/bath-towel.png'); ?>"
                                 alt="Home Automation Icon" class="value-icon">
                             <p>35+ Luxury Amenities</p>
                         </div>
-                        <div class="value-item">
+
+                        <div class="value-item mb-2">
                             <img src="<?= Url::to('@web/web/assets/images/highlight/icons/terrace.png'); ?>"
                                 alt="Home Automation Icon" class="value-icon">
                             <p>Terrace Amenities</p>
                         </div>
+
                         <a href="#enquiry" class="btn btn-enquiry">Enquire Now</a>
 
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
+
 
 
     <section class="quality-budget">
@@ -186,7 +217,7 @@ use yii\helpers\Url;
                 <!-- Apartment Card 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="apartment-card">
-                        <h3 class="card-title">Apartments</h3>
+                        <h3 class="card-title p-2">Apartments</h3>
                         <div class="points-container p-3">
                             <div class="row">
                                 <div class="col-6">
@@ -198,8 +229,8 @@ use yii\helpers\Url;
                             </div>
                             <p class="points">Price Start From: 7.85 Cr*</p>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#enquire" class="btn  enquire-btn">Enquire Now</a>
                             <div class="card-number">01</div>
                         </div>
                     </div>
@@ -208,7 +239,7 @@ use yii\helpers\Url;
                 <!-- Apartment Card 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="apartment-card">
-                        <h3 class="card-title">Apartments</h3>
+                        <h3 class="card-title p-2">Apartments</h3>
                         <div class="points-container p-3">
                             <div class="row">
                                 <div class="col-6">
@@ -220,8 +251,8 @@ use yii\helpers\Url;
                             </div>
                             <p class="points">Price Start From: 8.25 Cr*</p>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#enquire" class="btn  enquire-btn">Enquire Now</a>
                             <div class="card-number">02</div>
                         </div>
                     </div>
@@ -229,9 +260,9 @@ use yii\helpers\Url;
 
                 <!-- Apartment Card 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="apartment-card p-3">
-                        <h3 class="card-title">Apartments</h3>
-                        <div class="points-container">
+                    <div class="apartment-card">
+                        <h3 class="card-title p-2">Apartments</h3>
+                        <div class="points-container p-3">
                             <div class="row">
                                 <div class="col-6">
                                     <p class="points">Configuration</p>
@@ -242,8 +273,8 @@ use yii\helpers\Url;
                             </div>
                             <p class="points">Price Start From: 9.35 Cr*</p>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <a href="#enquire" class="btn btn-primary enquire-btn">Enquire Now</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#enquire" class="btn  enquire-btn">Enquire Now</a>
                             <div class="card-number">03</div>
                         </div>
                     </div>
@@ -260,44 +291,48 @@ use yii\helpers\Url;
 
             <div class="row">
                 <!-- Plan 1 -->
-                <div class="col-md-3 plan-container">
+                <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
                     <div class="plan-item">
                         <h5>3 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
-                            <img src="<?= Url::to('@web/web/assets/images/plan/ITQE.png'); ?>" alt="Plan 1" class="img-fluid">
+                            <img src="<?= Url::to('@web/web/assets/images/plan/ITQE.png'); ?>" alt="Plan 1"
+                                class="img-fluid">
                             <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Plan 2 -->
-                <div class="col-md-3 plan-container">
+                <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
                     <div class="plan-item">
                         <h5>3.5 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
-                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 2" class="img-fluid">
+                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 2"
+                                class="img-fluid">
                             <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Plan 3 -->
-                <div class="col-md-3 plan-container">
+                <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
                     <div class="plan-item">
                         <h5>4 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
-                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 3" class="img-fluid">
+                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 3"
+                                class="img-fluid">
                             <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Plan 4 -->
-                <div class="col-md-3 plan-container">
+                <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
                     <div class="plan-item">
                         <h5>4 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
-                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 4" class="img-fluid">
+                            <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 4"
+                                class="img-fluid">
                             <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
                         </div>
                     </div>
@@ -308,9 +343,10 @@ use yii\helpers\Url;
 
 
 
+
     <section class="luxury-residences">
         <div class="container">
-            <h6 class="section-title text-center">Amenities</h6>
+            <h6 class="section-title text-center">AMENITIES</h6>
             <h2 class="section-heading text-center">STUNNING LUXURY PRIME RESIDENCES, DESIGNED FOR LIFE</h2>
 
             <!-- Cards Container -->
@@ -376,8 +412,8 @@ use yii\helpers\Url;
                     <div class="residence-card col-md-3">
                         <div class='icon-container'>
 
-                            <img src="<?= Url::to('@web/web/assets/images/amenities/icons/meditation.png'); ?>" alt="Icon 5"
-                                class="residence-icon">
+                            <img src="<?= Url::to('@web/web/assets/images/amenities/icons/meditation.png'); ?>"
+                                alt="Icon 5" class="residence-icon">
                         </div>
                         <div class="residence-info">
                             <h3>Yoga Deck</h3>
@@ -446,33 +482,34 @@ use yii\helpers\Url;
 
                 <!-- Right Side: Title, Points, and Enquiry Button -->
                 <div class="col-lg-6 col-md-12 location-info d-flex flex-column justify-content-between">
-                    <div>
-                        <h6 class="section-title text-center">LOCATION ADVANTAGE</h6>
-                        <h2 class="section-heading text-center">STAY CONNECTED, COMFORTABLE AND CONVENIENT</h2>
 
-                        <div class="location-points">
-                            <div class="point">
-                                <span class="point-number p-3">01</span>
-                                <p>Located next to NH 75 in Yeshwanthpur, West Bangalore, offering excellent connectivity.</p>
-                            </div>
+                    <h6 class="section-title text-center">LOCATION ADVANTAGE</h6>
+                    <h2 class="section-heading text-center">STAY CONNECTED, COMFORTABLE AND CONVENIENT</h2>
 
-                            <div class="point">
-                                <span class="point-number p-3">02</span>
-                                <p>Just a 2-minute stroll to Goraguntepalya metro station.</p>
-                            </div>
+                    <div class="location-points">
+                        <div class="point">
+                            <span class="point-number p-3">01</span>
+                            <p>Located next to NH 75 in Yeshwanthpur, West Bangalore, offering excellent connectivity.
+                            </p>
+                        </div>
 
-                            <div class="point">
-                                <span class="point-number p-3">03</span>
-                                <p>Only four apartments per floor with enhanced privacy and exclusivity.</p>
-                            </div>
+                        <div class="point">
+                            <span class="point-number p-3">02</span>
+                            <p>Just a 2-minute stroll to Goraguntepalya metro station.</p>
+                        </div>
 
-                            <div class="point">
-                                <span class="point-number p-3">04</span>
-                                <p>Located next to the landmark People Tree Hospitals, offering medical services at your
-                                    disposal without the worry of travel or city traffic.</p>
-                            </div>
+                        <div class="point">
+                            <span class="point-number p-3">03</span>
+                            <p>Only four apartments per floor with enhanced privacy and exclusivity.</p>
+                        </div>
+
+                        <div class="point">
+                            <span class="point-number p-3">04</span>
+                            <p>Located next to the landmark People Tree Hospitals, offering medical services at your
+                                disposal without the worry of travel or city traffic.</p>
                         </div>
                     </div>
+
 
                     <!-- Enquiry Button -->
                     <a href="#enquiry" class="btn enquiry-btn">Enquire Now</a>
@@ -486,26 +523,26 @@ use yii\helpers\Url;
     <section id="schedule-visit" class="schedule-visit py-5">
         <div class="container">
             <div class="row">
+                <div class="col-md-6 order-first order-md-last">
+                    <img src="<?= Url::to('@web/web/assets/images/enquire.png'); ?>" alt="Enquire" class="img-fluid">
+                </div>
 
-                <div class="col-md-6">
-                    <h2 class="section-heading">Schedule a site visit tour</h2>
+                <div class="col-md-6 order-last order-md-first">
+                    <h6 class="section-title">ENQUIRE</h6>
+                    <h2 class="section-heading">SCHEDULE A VISIT TOUR</h2>
                     <p>Nothing compares to experiencing a home in person, especially when it's about finding your dream
                         residence. A visit to In That Quiet Earth gives you the chance to fully appreciate the quality
                         of construction and discover the remarkable amenities, such as open-air theater, Heated Swimming
                         Pool, Billiards, Table Tennis, Pet Park, Gymnasium, Multipurpose Hall, and others. The elegance,
                         lush surroundings, and captivating views will truly impress you. Don’t miss out—schedule your
-                        site visit today by calling +916361417731 and take the first step toward luxury living.</p>
-                    <!--  Button -->
+                        site visit today by calling +916361417731 and take the first step toward luxury living.</p>
+                    <!-- Button -->
                     <a href="#" class="btn enquiry-btn">Schedule A Site Visit</a>
                 </div>
-
-                <div class="col-md-6">
-                    <img src="<?= Url::to('@web/web/assets/images/enquire.png'); ?>" alt="Enquire" class="img-fluid">
-                </div>
-
             </div>
         </div>
     </section>
+
 
     <section class="about-builder py-5 text-white">
         <div class="container about-container p-5">
@@ -528,25 +565,22 @@ use yii\helpers\Url;
     <section class="enquiry-section py-5">
         <div class="container">
 
-
-            <div class="row mb-5">
-
-
+            <div class="row mb-5 d-flex align-items-stretch">
                 <div class="col-md-6">
                     <?= $this->render('enquiry.php', ['enquiry' => $enquiry]) ?>
-
-
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 d-none d-md-block">
                     <!-- Map Section -->
                     <h5>Location Map</h5>
                     <div id="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" width="100%" height="250"
+                        <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" width="100%"
                             frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </section>
 </div>

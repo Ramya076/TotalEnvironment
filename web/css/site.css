@@ -171,7 +171,6 @@ h5 {
 }
 /* Location Advantage Section */
 .location-advantage {
-  padding: 80px 0;
   background-color: #f9f9f9;
 }
 
@@ -199,9 +198,41 @@ h5 {
   margin-bottom: 30px;
 }
 
-/* Points Styling */
-.location-points {
-  margin-bottom: 30px;
+/* Position icons inside the input fields */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px; /* Add enough space for error messages */
+}
+.nav-link:hover {
+  color: white !important;
+}
+/* Ensure the form input has padding for the icon */
+.form-control {
+  padding-left: 40px; /* Adjust padding to make room for the icon */
+}
+
+/* Error message styling */
+.help-block {
+  position: absolute; /* Keep error messages from shifting the input */
+  bottom: -20px; /* Position the error message below the input */
+  left: 0;
+  color: red; /* Optional: Adjust color to match error message styling */
+  font-size: 12px;
+}
+
+/* Adjust for larger input fields if necessary */
+textarea.form-control {
+  padding-left: 40px;
+  padding-right: 10px;
 }
 
 .point {
@@ -223,20 +254,6 @@ h5 {
 }
 
 /* Enquiry Button */
-.enquiry-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.enquiry-btn:hover {
-  background-color: #0056b3;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -357,14 +374,10 @@ h5 {
 
 .arrow {
   font-size: 24px;
-  color: #007bff;
+  color: black;
   cursor: pointer;
   margin: 0 10px;
   transition: color 0.3s ease;
-}
-
-.arrow:hover {
-  color: #0056b3;
 }
 
 /* Responsive Adjustments */
@@ -415,7 +428,6 @@ h5 {
 }
 
 .hero-cta-btn {
-  background-color: #007bff;
   color: white;
   padding: 14px 25px; /* Button padding for better balance */
   font-size: 16px;
@@ -426,9 +438,15 @@ h5 {
   transition: background-color 0.3s ease;
   letter-spacing: 0.5px;
 }
+.form-header {
+  width: 100%; /* Ensure the header takes full width */
+  padding: 15px; /* Add padding around the header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 450px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
-.hero-cta-btn:hover {
-  background-color: #0056b3;
+
 }
 
 .appointment-form {
@@ -437,26 +455,31 @@ h5 {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   max-width: 450px;
-  margin: 0 auto;
 }
 .appointment-form {
   position: relative; /* For positioning close button */
 }
 
+
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+  position: absolute; /* Position the close button absolutely */
+  bottom: 10px; /* Distance from the bottom */
+  right: -50px; /* Distance from the right */
+  width: 40px; /* Set width for the button */
+  height: 40px; /* Set height for the button */
+  border-radius: 50%; /* Make it round */
+  background-color: white; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  border: none; /* Remove border */
+  font-size: 20px; /* Set font size for the close icon */
+  cursor: pointer; /* Change cursor on hover */
+  outline: none; /* Remove outline */
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hero-section {
-    background-image: url("../assets/images/mobile-header.png"); /* Mobile background */
+    background-image: url(""); /* Mobile background */
   }
 
   .hero-content {
@@ -482,7 +505,6 @@ h5 {
 .appointment-form textarea,
 .appointment-form select {
   width: 100%;
-  padding: 12px;
   font-size: 16px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -511,8 +533,9 @@ h5 {
   background-color: #f9f9f9;
 }
 
-.overview-section .overview-content {
-  max-width: 550px; /* Set max width to limit content width */
+.overview-section .overview-content,
+.section .container {
+  max-width: 550px;
 }
 
 .overview-section h2 {
@@ -579,7 +602,6 @@ h5 {
 }
 /* Values Section Styling */
 .values-section {
-  padding: 80px 0; /* Adjust for spacing around the section */
   background-color: #ffffff;
 }
 
@@ -593,26 +615,16 @@ h5 {
   border-radius: 10px; /* Optional: Rounded corners for image */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
-.values-content {
-  padding-left: 40px; /* Space between image and content on desktop */
+section {
+  margin: 1rem;
 }
-
-.values-content h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  line-height: 1.3;
-}
-
-.values-list {
+s .values-list {
   margin-top: 20px;
 }
 
 .value-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .value-icon {
@@ -704,7 +716,6 @@ h5 {
 
 /* Enquiry Button */
 .enquiry-btn {
-  background-color: #007bff;
   color: white;
   padding: 12px 25px;
   text-transform: uppercase;
@@ -712,10 +723,6 @@ h5 {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
-
-.enquiry-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Adjustments */
@@ -763,15 +770,11 @@ h5 {
   color: white; /* Change the title color */
 }
 
-/* Points Container Styling */
-.points-container {
-  margin-bottom: 20px;
-}
-
 .points {
   font-size: 16px;
   color: #666;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
   box-shadow: 1px 6px 24.9px 3px #00000021;
 }
 
@@ -785,14 +788,10 @@ h5 {
   transition: background-color 0.3s ease;
 }
 
-.enquire-btn:hover {
-  background-color: #0056b3;
-}
-
-.card-number {
-  font-size: 48px;
-  color: #e0e0e0;
-  font-weight: bold;
+.quality-budget .enquire-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }
 
 /* Responsive Styling */
@@ -806,7 +805,7 @@ h5 {
   }
 
   .card-number {
-    font-size: 36px;
+    font-size: 25px;
   }
 }
 
@@ -821,22 +820,6 @@ h5 {
   font-size: 16px;
   color: #666;
   margin-bottom: 10px;
-}
-
-/* Enquiry Button */
-.enquiry-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.enquiry-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Adjustments */
@@ -867,7 +850,6 @@ h5 {
 }
 /* Gallery Section */
 .gallery-section {
-  padding: 50px 0;
   background-color: #f9f9f9;
 }
 
@@ -902,20 +884,18 @@ h5 {
 
 .arrow {
   font-size: 24px;
-  color: #007bff;
   cursor: pointer;
   margin: 0 10px;
   transition: color 0.3s ease;
-}
-
-.arrow:hover {
-  color: #0056b3;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .section-title {
     font-size: 12px;
+  }
+  .section-heading {
+    font-size: 16px;
   }
 
   .gallery-image {
@@ -955,12 +935,15 @@ h5 {
 }
 
 .section-title {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   text-align: left;
+  padding: 10px;
+  text-align: center;
 }
 .section-heading {
-  font-size: 32px;
+  font-size: 28px;
+  margin-bottom: 20px;
   font-weight: bold;
   text-align: left;
   text-transform: capitalize;
@@ -969,7 +952,6 @@ h5 {
 
 /* Quality That Fits Your Budget Section */
 .quality-budget {
-  padding: 80px 0;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -999,10 +981,11 @@ h5 {
   font-size: 24px;
   font-weight: 600;
   background-color: #607a68;
-  margin-bottom: 15px;
   color: white;
 }
-
+.points-container {
+  min-height: 230px;
+}
 .configuration,
 .price,
 .price-start {
@@ -1020,7 +1003,6 @@ h5 {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
@@ -1028,19 +1010,14 @@ h5 {
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
-
-.enquire-btn:hover {
-  background-color: #0056b3;
-}
-
 /* Card Number Styling */
 .card-number {
   position: absolute;
   bottom: 10px;
   right: 15px;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: bold;
-  color: #e0e0e0;
+  color: #292929;
   z-index: 1;
 }
 
@@ -1051,7 +1028,7 @@ h5 {
   }
 
   .card-number {
-    font-size: 36px;
+    font-size: 25px;
   }
 }
 .about-builder {
@@ -1066,20 +1043,6 @@ h5 {
   margin-bottom: 1.5rem;
 }
 
-.position-relative {
-  position: relative;
-}
-
-.placeholder-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px; /* Adjust as necessary */
-  color: #888; /* Icon color */
-  transform: translateY(-50%);
-  pointer-events: none; /* Prevent interaction with the placeholder */
-  transition: 0.2s ease all; /* Animation for placeholder */
-}
-
 input,
 textarea {
   padding-left: 40px; /* Add padding for the icon */
@@ -1090,26 +1053,7 @@ textarea::placeholder {
   color: transparent; /* Hide default placeholder */
 }
 
-input:focus + .placeholder-icon,
-input:not(:placeholder-shown) + .placeholder-icon,
-textarea:focus + .placeholder-icon,
-textarea:not(:placeholder-shown) + .placeholder-icon {
-  color: #3a3a3a; /* Change color when focused or filled */
-}
-.position-relative {
-  position: relative;
-}
-
-.placeholder-icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: #999;
-  pointer-events: none;
-}
-
-.form-group .form-control {
+.form-control {
   padding-left: 40px; /* Add padding to make room for the icons */
 }
 .about-container {
@@ -1163,7 +1107,7 @@ textarea:not(:placeholder-shown) + .placeholder-icon {
   border-radius: 15px;
   background-color: #000;
   color: white;
-  padding: 3px;
+  padding: 10px;
 }
 
 /* Plan Container Styling */
@@ -1190,6 +1134,7 @@ textarea:not(:placeholder-shown) + .placeholder-icon {
   transform: translate(-50%, -50%);
   z-index: 10000;
   opacity: 1;
+  min-width: 80%;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1206,14 +1151,22 @@ textarea:not(:placeholder-shown) + .placeholder-icon {
   }
 
   .plan-image-wrapper:hover img {
-    opacity: 1; /* Reset the dimming effect on mobile */
+    opacity: 1;
   }
 
   .plan-image-wrapper:hover .plan-btn {
-    opacity: 1; /* Ensure button is always visible on mobile */
+    opacity: 1;
   }
 }
 
 .inline-checkbox-label {
   display: inline-block;
+}
+#map-container {
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
