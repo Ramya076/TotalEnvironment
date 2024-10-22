@@ -1,6 +1,8 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\Url;
 ?>
 
 <div class="row">
@@ -24,7 +26,7 @@ use yii\widgets\ActiveForm;
     <!-- Name Field -->
     <div class="form-group position-relative col-md-12">
         <?= $form->field($enquiry, 'name')->textInput(['class' => 'form-control', 'id' => 'name', 'required' => true])->label(false) ?>
-        <span class="placeholder-icon"><i class="fas fa-user"></i> Name</span>
+        <span class="placeholder-icon"><img src="<?= Url::to('@web/web/assets/images/icons/user.png'); ?>"> Name</span>
     </div>
 
     <!-- Email and Phone in 2 Columns -->
@@ -32,20 +34,20 @@ use yii\widgets\ActiveForm;
         <!-- Phone Field -->
         <div class="form-group position-relative col-md-6">
             <?= $form->field($enquiry, 'phone')->textInput(['class' => 'form-control', 'id' => 'phone', 'required' => true])->label(false) ?>
-            <span class="placeholder-icon"><i class="fas fa-phone"></i> +91</span>
+            <span class="placeholder-icon"><img src="<?= Url::to('@web/web/assets/images/icons/flag.png'); ?>"> +91</span>
         </div>
 
         <!-- Email Field -->
         <div class="form-group position-relative col-md-6">
             <?= $form->field($enquiry, 'email')->input('email', ['class' => 'form-control', 'id' => 'email', 'required' => true])->label(false) ?>
-            <span class="placeholder-icon"><i class="fas fa-envelope"></i> E-mail</span>
+            <span class="placeholder-icon"><img src="<?= Url::to('@web/web/assets/images/icons/mail.png'); ?>"> E-mail</span>
         </div>
     </div>
 
     <!-- Message Field -->
     <div class="form-group position-relative col-md-12">
         <?= $form->field($enquiry, 'message')->textarea(['rows' => 4, 'class' => 'form-control', 'id' => 'message', 'required' => true])->label(false) ?>
-        <span class="placeholder-icon"><i class="fas fa-comment-dots"></i> Message</span>
+        <span class="placeholder-icon"> Message</span>
     </div>
 
     <!-- Consent Checkbox -->

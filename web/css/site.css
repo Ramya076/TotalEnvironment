@@ -8,7 +8,8 @@ body {
   font-style: italic;
 }
 
-.nav-link,nav-link:hover {
+.nav-link,
+nav-link:hover {
   color: white;
 }
 
@@ -17,7 +18,7 @@ body {
 }
 
 #navbarNav .btn {
-  margin-left: 15px; 
+  margin-left: 15px;
 }
 
 /* add sorting icons to gridview sort links */
@@ -74,7 +75,6 @@ h2,
 h5 {
   color: #333;
 }
-
 
 .footer {
   background-color: #f5f5f5;
@@ -456,15 +456,15 @@ h5 {
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hero-section {
-      background-image: url('../assets/images/mobile-header.png'); /* Mobile background */
+    background-image: url("../assets/images/mobile-header.png"); /* Mobile background */
   }
 
   .hero-content {
-      order: 1; /* Move hero content to the top */
+    order: 1; /* Move hero content to the top */
   }
 
   .appointment-form {
-      order: 2; /* Move appointment form below hero content */
+    order: 2; /* Move appointment form below hero content */
   }
 }
 
@@ -498,7 +498,6 @@ h5 {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
 
 .appointment-form small {
   display: block;
@@ -540,7 +539,6 @@ h5 {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
 
 /* Image Card Styles */
 .overview-images {
@@ -1214,4 +1212,8 @@ textarea:not(:placeholder-shown) + .placeholder-icon {
   .plan-image-wrapper:hover .plan-btn {
     opacity: 1; /* Ensure button is always visible on mobile */
   }
+}
+
+.inline-checkbox-label {
+  display: inline-block;
 }
