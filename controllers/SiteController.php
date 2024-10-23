@@ -101,7 +101,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // Process form (e.g., send email, save to DB, etc.)
             Yii::$app->session->setFlash('success', 'Your appointment has been booked successfully.');
-            return $this->refresh();
+            return $this->redirect(['index']);
         }
        
 
@@ -153,49 +153,12 @@ class SiteController extends Controller
     {
         $model = new Enquiry();
         if ($model->load(Yii::$app->request->post())) {
-            Yii::$app->session->setFlash('Enquiry');
+            Yii::$app->session->setFlash('success', 'Your Enquiry has been submitted successfully.');
 
-            return $this->refresh();
+            return $this->redirect(['index']);
         }
        
     }
-        
-    /**
-     * actionChangepassword
-     *
-     * @return void
-     */
-    public function actionChangepassword()
-    {
-        $this->layout = 'login';
-        $model = new ChangePasswordForm();
-        
-        if($model->load(Yii::$app->request->post()))
-        {
-           
-            $model->user_id = Yii::$app->user->id;
-            $model->current_password = trim($model->current_password);
-            $model->new_password = trim($model->new_password);
-            $model->confirm_password = trim($model->confirm_password);
-            if($model->validate())
-            {
-                $user = User::findOne(Yii::$app->user->id);
-                $user->password = sha1($model->new_password);
-                if($user->save()){
-                    Yii::$app->session->setFlash('success', 'Password updated successfully!');
-                }else{
-                    Yii::$app->session->setFlash('error', 'Failed to update password!');
-                }
-                
-                return $this->redirect(['index']);
-            }
-        }
-        
-        return $this->render('change-password', [
-            'model' => $model,
-        ]);
-    }
-    
 
     /**
      * Displays about page.

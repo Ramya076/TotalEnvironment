@@ -29,28 +29,57 @@ use yii\helpers\Url;
     <div class="col-md-12">
         <?= $form->field($enquiry, 'name', [
             'template' => '<img src="' . Url::to('@web/web/assets/images/icons/user.png') . '" class="input-icon">{input}{error}',
-        ])->textInput(['class' => 'form-control', 'id' => 'name', 'placeholder' => 'Name', 'required' => true])->label(false) ?>
+        ])->textInput([
+            'class' => 'form-control',
+            'id' => 'name',
+            'placeholder' => 'Name',
+            'required' => true,
+            'maxlength' => 150,
+            'oninput' => "this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
+        ])->label(false) ?>
     </div>
 
     <!-- Phone Field -->
     <div class="col-md-12">
         <?= $form->field($enquiry, 'phone', [
             'template' => '<img src="' . Url::to('@web/web/assets/images/icons/flag.png') . '" class="input-icon">{input}{error}',
-        ])->textInput(['class' => 'form-control', 'id' => 'phone', 'placeholder' => '+91', 'required' => true])->label(false) ?>
+        ])->textInput([
+            'class' => 'form-control',
+            'id' => 'phone',
+            'placeholder' => '+91',
+            'required' => true,
+            'maxlength' => 15,
+            'oninput' => "this.value = this.value.replace(/[^0-9\s]/g, '');"
+        ])->label(false) ?>
     </div>
 
     <!-- Email Field -->
     <div class="col-md-12">
         <?= $form->field($enquiry, 'email', [
             'template' => '<img src="' . Url::to('@web/web/assets/images/icons/mail.png') . '" class="input-icon">{input}{error}',
-        ])->input('email', ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'E-mail', 'required' => true])->label(false) ?>
+        ])->input('email', [
+            'class' => 'form-control',
+            'id' => 'email',
+            'maxlength' => 100,
+            'placeholder' => 'E-mail',
+            'required' => true
+        ])->label(false) ?>
     </div>
 
     <!-- Message Field -->
     <div class="col-md-12">
         <?= $form->field($enquiry, 'message', [
             'template' => '<img src="' . Url::to('@web/web/assets/images/icons/message.png') . '" class="input-icon">{input}{error}',
-        ])->textarea(['rows' => 4, 'class' => 'form-control', 'id' => 'message', 'placeholder' => 'Message', 'required' => true])->label(false) ?>
+        ])->textarea([
+            'rows' => 4,
+            'class' => 'form-control',
+            'id' => 'message',
+            'placeholder' => 'Message',
+            'required' => true,
+            'maxlength' => 255,
+
+            'oninput' => "this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
+        ])->label(false) ?>
     </div>
 
     <!-- Consent Checkbox -->

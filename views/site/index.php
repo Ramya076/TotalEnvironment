@@ -57,20 +57,34 @@ use yii\helpers\Url;
                     ])->label(false) ?>
 
 
-
                     <?= $form->field($model, 'name', [
                         'template' => '<img src="' . Url::to('@web/web/assets/images/icons/user.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
-                    ])->textInput(['placeholder' => 'Name']); ?>
-
+                    ])->textInput([
+                        'placeholder' => 'Name',
+                        'oninput' => "this.value = this.value.replace(/[^a-zA-Z\s]/g, '');",
+                        'maxlength'=>30,
+                    ]); ?>
 
 
                     <?= $form->field($model, 'email', [
                         'template' => '<img src="' . Url::to('@web/web/assets/images/icons/mail.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
-                    ])->textInput(['placeholder' => 'Your Email'])->label(false) ?>
+                    ])->textInput(['placeholder' => 'Your Email', 'maxlength'=>100,])->label(false) ?>
+
                     <?= $form->field($model, 'phone', [
                         'template' => '<img src="' . Url::to('@web/web/assets/images/icons/flag.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
-                    ])->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
-                    <?= $form->field($model, 'message')->textarea(['rows' => 2, 'placeholder' => 'Message'])->label(false) ?>
+                    ])->textInput([
+                        'placeholder' => 'Your Phone Number',
+                        'maxlength'=>15,
+                        'oninput' => "this.value = this.value.replace(/[^0-9\s]/g, '');"
+                    ])->label(false) ?>
+
+                    <?= $form->field($model, 'message')->textarea([
+                        'rows' => 2,
+                        'placeholder' => 'Message',
+                        'maxlength'=>255,
+                        'oninput' => "this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
+                    ])->label(false) ?>
+
                     <div class="form-group form-check col-md-12 d-flex align-items-center">
                         <input type="checkbox" id="consent-checkbox" class="mr-2" required>
                         <label for="consent-checkbox" class="mb-0">
@@ -196,8 +210,11 @@ use yii\helpers\Url;
                                 alt="Home Automation Icon" class="value-icon">
                             <p>Terrace Amenities</p>
                         </div>
+                        <div class="mt-5">
+                            <a href="#enquiry" class="btn btn-enquiry">Enquire Now</a>
 
-                        <a href="#enquiry" class="btn btn-enquiry">Enquire Now</a>
+                        </div>
+
 
                     </div>
                 </div>
@@ -292,9 +309,10 @@ use yii\helpers\Url;
             <div class="row">
                 <!-- Plan 1 -->
                 <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
-                    <div class="plan-item">
-                        <h5>3 BHK Apartment</h5>
+                    <div class="plan-item container">
+
                         <div class="plan-image-wrapper">
+                            <h5>3 BHK Apartment</h5>
                             <img src="<?= Url::to('@web/web/assets/images/plan/ITQE.png'); ?>" alt="Plan 1"
                                 class="img-fluid">
                             <a href="#" class="btn btn-secondary plan-btn">Download Floor Plan</a>
@@ -304,7 +322,7 @@ use yii\helpers\Url;
 
                 <!-- Plan 2 -->
                 <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
-                    <div class="plan-item">
+                    <div class="plan-item container">
                         <h5>3.5 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
                             <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 2"
@@ -316,7 +334,7 @@ use yii\helpers\Url;
 
                 <!-- Plan 3 -->
                 <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
-                    <div class="plan-item">
+                    <div class="plan-item container">
                         <h5>4 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
                             <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 3"
@@ -328,7 +346,7 @@ use yii\helpers\Url;
 
                 <!-- Plan 4 -->
                 <div class="col-lg-3 col-md-6 col-sm-6 plan-container">
-                    <div class="plan-item">
+                    <div class="plan-item container">
                         <h5>4 BHK Apartment</h5>
                         <div class="plan-image-wrapper">
                             <img src="<?= Url::to('@web/web/assets/images/plan/Floorplan.png'); ?>" alt="Plan 4"
@@ -340,10 +358,6 @@ use yii\helpers\Url;
             </div>
         </div>
     </section>
-
-
-
-
     <section class="luxury-residences">
         <div class="container">
             <h6 class="section-title text-center">AMENITIES</h6>

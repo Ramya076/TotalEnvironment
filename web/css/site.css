@@ -210,22 +210,22 @@ h5 {
 
 .form-group {
   position: relative;
-  margin-bottom: 30px; /* Add enough space for error messages */
+  margin-bottom: 30px;
 }
 .nav-link:hover {
   color: white !important;
 }
 /* Ensure the form input has padding for the icon */
 .form-control {
-  padding-left: 40px; /* Adjust padding to make room for the icon */
+  padding-left: 40px; 
 }
 
 /* Error message styling */
 .help-block {
-  position: absolute; /* Keep error messages from shifting the input */
-  bottom: -20px; /* Position the error message below the input */
+  position: absolute; 
+  bottom: -20px; 
   left: 0;
-  color: red; /* Optional: Adjust color to match error message styling */
+  color: red; 
   font-size: 12px;
 }
 
@@ -278,7 +278,7 @@ textarea.form-control {
 
 /* Stunning Luxury Prime Residences Section */
 .luxury-residences {
-  padding: 80px 0; /* Space around the section */
+  padding: 80px 0;
   background-color: #f9f9f9;
 }
 
@@ -290,12 +290,12 @@ textarea.form-control {
 
 /* Slider Container */
 .residence-slider {
-  overflow: hidden; /* Hide overflowing cards */
+  overflow: hidden; 
 }
 
 .residence-card-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth transition when sliding */
+  transition: transform 0.5s ease-in-out; 
 }
 
 /* Each card */
@@ -322,13 +322,13 @@ textarea.form-control {
   align-items: center;
   background-color: #f8f8f8;
   margin: 10px auto;
-  transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing transition */
+  transition: width 0.3s ease, height 0.3s ease; 
 }
 
 .residence-icon {
   width: 60%;
   height: auto;
-  transition: width 0.3s ease; /* Smooth resizing transition */
+  transition: width 0.3s ease; 
 }
 
 /* Responsive Styling for Medium Devices (Tablets) */
@@ -396,7 +396,7 @@ textarea.form-control {
 }
 
 .hero-section {
-  background-image: url("../assets/images/header.png"); /* Replace with actual path */
+  background-image: url("../assets/images/header.png"); 
   background-size: cover;
   background-position: center;
   color: white;
@@ -411,7 +411,7 @@ textarea.form-control {
 }
 
 .hero-content {
-  max-width: 550px; /* Adjust max width to match the design */
+  max-width: 550px; 
 }
 
 .hero-title {
@@ -422,7 +422,7 @@ textarea.form-control {
 }
 
 .hero-description {
-  font-size: 20px; /* Slightly increased description font size */
+  font-size: 20px; 
   margin-bottom: 30px;
   line-height: 1.5;
 }
@@ -439,14 +439,12 @@ textarea.form-control {
   letter-spacing: 0.5px;
 }
 .form-header {
-  width: 100%; /* Ensure the header takes full width */
-  padding: 15px; /* Add padding around the header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; 
+  padding: 15px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   max-width: 450px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
-
 }
 
 .appointment-form {
@@ -460,34 +458,33 @@ textarea.form-control {
   position: relative; /* For positioning close button */
 }
 
-
 .close-btn {
-  position: absolute; /* Position the close button absolutely */
-  bottom: 10px; /* Distance from the bottom */
-  right: -50px; /* Distance from the right */
-  width: 40px; /* Set width for the button */
-  height: 40px; /* Set height for the button */
-  border-radius: 50%; /* Make it round */
-  background-color: white; /* White background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
-  border: none; /* Remove border */
-  font-size: 20px; /* Set font size for the close icon */
-  cursor: pointer; /* Change cursor on hover */
-  outline: none; /* Remove outline */
+  position: absolute; 
+  bottom: 10px; 
+  right: -50px; 
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  border: none; 
+  font-size: 20px; 
+  cursor: pointer; 
+  outline: none; 
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hero-section {
-    background-image: url(""); /* Mobile background */
+    background-image: url(""); 
   }
 
   .hero-content {
-    order: 1; /* Move hero content to the top */
+    order: 1; 
   }
 
   .appointment-form {
-    order: 2; /* Move appointment form below hero content */
+    order: 2; 
   }
 }
 
@@ -529,7 +526,7 @@ textarea.form-control {
 
 /* Overview Section Styles */
 .overview-section {
-  padding: 80px 0; /* Adjust padding for space around the section */
+  padding: 80px 0;
   background-color: #f9f9f9;
 }
 
@@ -571,19 +568,18 @@ textarea.form-control {
 .image-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Gap between images */
 }
 
 .overview-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adding a shadow effect for images */
-  transition: transform 0.3s ease; /* Animation for hover effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .overview-img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
 }
 
 /* Responsive Adjustments */
@@ -591,13 +587,19 @@ textarea.form-control {
   .overview-section {
     padding: 40px 0;
   }
+  .overview-section h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
 
   .overview-content {
-    margin-bottom: 40px; /* Ensure content has space above/below on mobile */
+    margin-bottom: 40px; 
   }
 
   .image-card {
-    justify-content: center; /* Center images on mobile */
+    justify-content: center;
   }
 }
 /* Values Section Styling */
@@ -606,14 +608,14 @@ textarea.form-control {
 }
 
 .values-image {
-  text-align: center; /* Center the image */
+  text-align: center; 
 }
 
 .values-image img {
-  width: 100%; /* Make the image responsive */
-  max-width: 500px; /* Set a max width for large screens */
-  border-radius: 10px; /* Optional: Rounded corners for image */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; 
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
 }
 section {
   margin: 1rem;
@@ -628,16 +630,16 @@ s .values-list {
 }
 
 .value-icon {
-  width: 50px; /* Icon size */
-  height: 50px; /* Icon size */
-  margin-right: 20px; /* Space between icon and text */
+  width: 35px; 
+  height: 35px;
+  margin-right: 20px; 
 }
 
 .value-item p {
   font-size: 18px;
   color: #666;
   line-height: 1.5;
-  margin: 0; /* Reset margin for better alignment */
+  margin: 0; 
 }
 
 /* Responsive Adjustments */
@@ -645,32 +647,36 @@ s .values-list {
   .values-section {
     padding: 40px 0;
   }
-
+  .value-icon {
+    width: 25px; 
+    height: 25px; 
+    margin-right: 20px; 
+  }
   .values-content {
-    padding-left: 0; /* Remove padding for mobile */
-    text-align: center; /* Center the content on smaller screens */
+    padding-left: 0; 
+    text-align: center; 
   }
 
   .value-item {
-    justify-content: center; /* Center each item */
-    text-align: left; /* Align text left under the icon */
+    justify-content: center; 
+    text-align: left; 
   }
 
   .value-icon {
-    margin-right: 15px; /* Reduce space between icon and text on mobile */
+    margin-right: 15px; 
   }
 }
 /* Price List Section */
 .price-list-section {
-  padding: 80px 0; /* Space around the section */
-  background-color: #f9f9f9; /* Light background color */
+  padding: 80px 0; 
+  background-color: #f9f9f9; 
 }
 
 .price-list-section h2 {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 50px; /* Space below the heading */
+  margin-bottom: 50px; 
 }
 
 /* Price Card Styling */
@@ -678,14 +684,14 @@ s .values-list {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for card depth */
-  text-align: center; /* Center content in the card */
-  margin-bottom: 30px; /* Space between cards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  margin-bottom: 30px; 
   transition: transform 0.3s ease;
 }
 
 .price-card:hover {
-  transform: translateY(-10px); /* Hover effect: slight lift */
+  transform: translateY(-10px); 
 }
 
 .price-card h3 {
@@ -698,7 +704,6 @@ s .values-list {
 .price-card .price {
   font-size: 20px;
   font-weight: 500;
-  color: #007bff; /* Primary blue color for price */
   margin-bottom: 20px;
 }
 
@@ -767,7 +772,7 @@ s .values-list {
 .apartment-card .card-title {
   font-size: 22px;
   font-weight: 600;
-  color: white; /* Change the title color */
+  color: white; 
 }
 
 .points {
@@ -825,7 +830,7 @@ s .values-list {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .apartment-img {
-    height: 180px; /* Adjust image height for mobile */
+    height: 180px; 
   }
 
   .quality-budget-section h2 {
@@ -855,7 +860,7 @@ s .values-list {
 
 /* Gallery Slider */
 .gallery-slider {
-  overflow: hidden; /* Hide overflowing images */
+  overflow: hidden; 
 }
 
 .gallery-wrapper {
@@ -865,15 +870,15 @@ s .values-list {
 
 /* Each Gallery Image */
 .gallery-image {
-  min-width: 300px; /* Adjust as per the image size */
+  min-width: 300px;
   flex-shrink: 0;
   margin-right: 20px;
 }
 
 .gallery-image img {
   width: 100%;
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  border-radius: 10px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
 }
 
 /* Arrow Controls */
@@ -910,8 +915,8 @@ s .values-list {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/images/header.png") no-repeat center center;
   background-size: cover;
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Arrange children vertically */
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .hero-content ul li {
@@ -922,9 +927,9 @@ s .values-list {
   border-radius: 10px !important;
 }
 .dotted-border {
-  border: 1px dotted #607a68; /* Adjust the border thickness and color */
-  padding: 10px; /* Space inside the border */
-  margin: 20px; /* Space outside the border */
+  border: 1px dotted #607a68;
+  padding: 10px; 
+  margin: 20px; 
 }
 .hero-cta-btn {
   font-size: 16px;
@@ -939,7 +944,6 @@ s .values-list {
   font-weight: 600;
   text-align: left;
   padding: 10px;
-  text-align: center;
 }
 .section-heading {
   font-size: 28px;
@@ -974,7 +978,7 @@ s .values-list {
 
 .card-content {
   padding: 40px 30px;
-  background-color: #f1f3f4; /* Card background color */
+  background-color: #f1f3f4;
 }
 
 .card-title {
@@ -1030,13 +1034,16 @@ s .values-list {
   .card-number {
     font-size: 25px;
   }
+  #book {
+    margin-top: 20px;
+  }
 }
 .about-builder {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/images/about.png") no-repeat center center;
   background-size: cover;
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Arrange children vertically */
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .form-group {
@@ -1045,16 +1052,16 @@ s .values-list {
 
 input,
 textarea {
-  padding-left: 40px; /* Add padding for the icon */
+  padding-left: 40px;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: transparent; /* Hide default placeholder */
+  color: transparent;
 }
 
 .form-control {
-  padding-left: 40px; /* Add padding to make room for the icons */
+  padding-left: 40px; 
 }
 .about-container {
   box-shadow: -56.13px 56.13px 56.13px 0px #ffffff1a inset;
@@ -1073,25 +1080,25 @@ textarea::placeholder {
 
 .location-advantage .row {
   display: flex;
-  align-items: stretch; /* Ensures that both columns have the same height */
+  align-items: stretch; 
 }
 
 .map-container {
-  flex: 1; /* Ensures that the map takes full height of the column */
+  flex: 1; 
   display: flex;
   justify-content: center;
-  align-items: center; /* Centers the map image */
+  align-items: center;
 }
 
 .map-image {
-  width: 100%; /* Makes the image responsive */
+  width: 100%;
   height: auto;
 }
 
 .location-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures the "Enquire Now" button sticks to the bottom */
+  justify-content: space-between;
 }
 
 .point {
@@ -1157,6 +1164,9 @@ textarea::placeholder {
   .plan-image-wrapper:hover .plan-btn {
     opacity: 1;
   }
+  .section-heading {
+    font-size: 22px !important; 
+  }
 }
 
 .inline-checkbox-label {
@@ -1170,3 +1180,6 @@ iframe {
   width: 100%;
   height: 100%;
 }
+
+
+
