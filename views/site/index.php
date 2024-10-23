@@ -47,30 +47,30 @@ use yii\helpers\Url;
                 <div class="appointment-form"> <?php $form = ActiveForm::begin(); ?>
 
                     <?= $form->field($model, 'project', [
-    'template' => '<div class="input-icon-wrapper"><img src="' . Url::to('@web/web/assets/images/icons/plan.png') . '" alt="icon" class="input-icon"><div class="separator"></div>{input}{hint}{error}</div>',
-])->dropDownList([
-    '1' => 'In That Quiet Earth',
-    '2' => 'Total Environment',
-], [
-    'prompt' => 'Choose Project',
-    'class' => 'form-control', // Add any classes you need
-])->label(false) ?>
+                        'template' => '<div class="input-icon-wrapper"><img src="' . Url::to('@web/web/assets/images/icons/plan.png') . '" alt="icon" class="input-icon"><div class="separator"></div>{input}{hint}{error}</div>',
+                    ])->dropDownList([
+                        '1' => 'In That Quiet Earth',
+                        '2' => 'Total Environment',
+                    ], [
+                        'prompt' => 'Choose Project',
+                        'class' => 'form-control', // Add any classes you need
+                    ])->label(false) ?>
 
 
 
                     <?= $form->field($model, 'name', [
-    'template' => '<img src="' . Url::to('@web/web/assets/images/icons/user.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
-])->textInput(['placeholder' => 'Name']); ?>
+                        'template' => '<img src="' . Url::to('@web/web/assets/images/icons/user.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
+                    ])->textInput(['placeholder' => 'Name']); ?>
 
 
 
                     <?= $form->field($model, 'email', [
-                            'template' => '<img src="' . Url::to('@web/web/assets/images/icons/mail.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
-                        ])->textInput(['placeholder' => 'Your Email'])->label(false) ?>
+                        'template' => '<img src="' . Url::to('@web/web/assets/images/icons/mail.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
+                    ])->textInput(['placeholder' => 'Your Email'])->label(false) ?>
                     <?= $form->field($model, 'phone', [
                         'template' => '<img src="' . Url::to('@web/web/assets/images/icons/flag.png') . '" alt="icon" class="input-icon">{input}{hint}{error}',
                     ])->textInput(['placeholder' => 'Your Phone Number'])->label(false) ?>
-                    <?= $form->field($model, 'message')->textarea(['rows' =>2, 'placeholder' => 'Message'])->label(false) ?>
+                    <?= $form->field($model, 'message')->textarea(['rows' => 2, 'placeholder' => 'Message'])->label(false) ?>
                     <div class="form-group form-check col-md-12 d-flex align-items-center">
                         <input type="checkbox" id="consent-checkbox" class="mr-2" required>
                         <label for="consent-checkbox" class="mb-0">
